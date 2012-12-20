@@ -1,0 +1,601 @@
+\documentclass[11pt, oneside, a4paper, headsepline]{scrartcl}
+% - options removed at end - liststotoc, idxtotoc, DIV9, openright, 
+\setcounter{tocdepth}{2}%set to 1 to get rid of subsecs from toc
+%\setlength{\textfloatsep}{0.5cm}
+
+
+%%%%%citation bib style for Japanese studies
+\usepackage[style=authortitle, isbn=false, url=false, doi=false]{biblatex}
+\newcommand{\citej}[2] {\footcite[\nopp #1]{#2} }
+\renewcommand{\intitlepunct}{~}
+\renewcommand{\newunitpunct}{\addcomma~}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{/Users/spkb/Documents/Bibliographies/tvpaperbib}
+
+\makeatletter
+\setlength\@fptop{0\p@}% float at the top
+%\setlength\@fpbot{0\p@}% float at the bottom
+\makeatother
+
+
+\usepackage[right=25mm, left=40mm]{geometry}
+\usepackage[figuresright]{rotating}
+\usepackage{xcolor}%color for bar graphs
+\usepackage{pstricks}%for drawing graphs etc
+\usepackage{pst-bar}%for drawing bar graphs
+\usepackage{pstricks-add}%as above - needs to be last
+
+%%%all this business sets default fonts and creates new cmds - cjk and CJK environment
+\usepackage{fontspec}
+ \defaultfontfeatures{Scale=MatchLowercase}
+ %\setromanfont[Mapping=tex-text]{Baskerville}
+  %\setsansfont[Mapping=tex-text]{Julius Black Bold}
+  % \setmonofont{Courier} 
+\newenvironment{CJK}{\fontspec[Scale=0.9]{Hiragino Mincho Pro}}{}
+\newcommand{\cjk}[1]{{\fontspec[Scale=0.9]{Hiragino Mincho Pro}#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}%allows adjust of linespace
+
+\usepackage{authorindex} % 9 Jun 08 - use \aimention{} - seems ok.
+
+\usepackage{url} % reformats urls into tt and makes sure breaks make sense
+\def\UrlFont{\rm}
+\usepackage{textcomp}% allows use of YEN symbol
+\usepackage{filecontents}%allows input from data file
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{lscape}%added 12dec - pdflscape complained!! this works
+\usepackage{pdfsync}% allows cmd-click to move between pvw and source - 3mar08
+\usepackage{makeidx} %12dec9pm 
+\usepackage{booktabs}
+\usepackage{colortbl}%shaded cells.rows etc in tables
+%\usepackage{hyperref} %hyperlinks 
+%\usepackage[all]{hypcap}%makes hyper links to TOP of images
+\usepackage{color,soul} %adds highlighting, underlining etc
+\definecolor{hlcol}{rgb}{.0,.9,.2} 
+\sethlcolor{hlcol} 
+\definecolor{rred}{rgb}{0.9,0,0}
+\setstcolor{rred}
+
+\newcommand{\cmmt}[1]{}%multiline comments - CMMT - opt-cmd-C
+
+%%%%SHOW LABELS%%%%
+%\usepackage{showlabels}
+%\renewcommand{\showlabelfont}{\tiny\slshape\red}
+%%%%SHOW LABELS%%%%
+
+\usepackage{framed}%easy frames/shaded boxes around text
+\definecolor{shadecolor}{rgb}{.93,.93,.93}
+
+\usepackage{todonotes}%add[disable] option if needed
+\usepackage{marvosym}%symbols
+
+%uncomment following to return bibliography to standard author year style
+%\usepackage{natbib}
+%\bibliographystyle{apalike}
+%\setcitestyle{notesep={:},round,aysep={},yysep={;}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\makeindex
+
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+%\setcapindent{1em} %change alignment of caption
+\setkomafont{captionlabel}{\scshape} %caption labels
+%\setkomafont{caption}{\sffamily} 
+
+%\usepackage[nolists]{endfloat} %moves floats to end and inserts markers in text
+
+%\usepackage{endnotes}
+%\let\footnote=\endnote
+
+%\usepackage{draftwatermark} %adds draft watermark to each page
+%\SetWatermarkAngle{60}
+%\SetWatermarkScale{1.5}
+%\SetWatermarkLightness{0.9}
+
+% these makes list spacing much better.
+\newenvironment{my_enum}{
+\begin{enumerate}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+\newenvironment{my_enumerate}{
+\begin{enumerate}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+\newenvironment{close_enum}{
+\begin{enumerate}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{1pt}
+ \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+\newenvironment{close_descrip}{
+\begin{description}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{1pt}
+ \setlength{\parsep}{0pt}}{\end{description}
+}
+\newenvironment{close_item}{
+\begin{itemize}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{1pt}
+ \setlength{\parsep}{0pt}}{\end{itemize}
+}
+
+\hyphenation{o-shi-ga-mi chi-ra-shi han-bai-ten yomi-uri asa-hi ca-mera-work Sky-Per-fect-JSAT mi-su-e-ta}
+\renewcommand{\labelitemi}{\Forward}%uses marvosym 'play' for lists
+\newcommand{\TYKZ}{\emph{T\={o}y\={o} Keizai}} 
+\newcommand{\ty}{\textyen}
+\newcommand{\hrpt}{\textit{H\={o}s\={o} Rep\={o}to}}
+
+\title{At the Digital Watershed: Terrestrial Television Broadcasting in Japan}
+\author{}
+\date{}
+
+\begin{document}
+%TC:ignore
+%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+%:doc-start
+\begin{abstract}%%%%%%%%%%ABSTRACT%%%%%%%%%%
+The switch to digital terrestrial broadcasting on 24 July 2011 marked a watershed for the broadcasting industry in Japan. Digitalisation is the single largest industry-wide event since the advent of alternative distribution technologies, satellite and cable, in the 1980s. Preparation for the switch to digital, known as \emph{chideji-ka}, has put existing business arrangements under pressure and has led to a renewed focus on of the future shape of the industry. There is increasing acknowledgement that change, especially in the relationship between central and local broadcasters, is inevitable. This paper summarises the position of the industry at the beginning of its digital age, arguing for a new view of broadcasting in Japan that recognises the two-tier reality behind industry rhetoric. It also summarises the major options open to the industry as it looks to redefine itself in a much-changed media environment.
+\end{abstract}
+%:keywords+count
+\paragraph*{Keywords:} television production, digitalisation, Japan, broadcasting business
+\paragraph*{Word count:} 9991
+\thispagestyle{empty}
+\clearpage
+
+% Table of Contents
+%\tableofcontents
+%\clearpage
+
+% Layout settings
+\setlength{\parindent}{1em}
+%TC:endignore
+\setcounter{page}{1}
+\section{Introduction}\label{Introduction}
+Television broadcasting in Japan, in terms of its industrial structures, legislative fundamentals, financial underpinnings and major players, has, barring the introduction of satellite distribution in 1989, continued without major upheavals between its inception in 1953 and the 2001 decision to switch to digital.\citej{63}{Kwak:2008} Media firms have enjoyed sustained stability, only one company of the 127 that now operate has come close to going out of business\footnote{KBS Kyoto (\textit{Kinki H\={o}s\={o}}) applied for protection under the Corporate Rehabilitation Law in 1994 after involvement in the Itoman scandal which left it with debts of \ty11.5 billion, it finally emerged in October 2007.\\
+`KBS Kyoto, k\={o}sei sh\={u}ketsu iwau' [Celebrating KBS's Emergence from Restructuring], \url{www.kyoto-minpo.net/archives/2007/11/26/post_3993.php} (accessed 7 Mar 2011)} and there have been no company mergers or takeovers since the very early years. 
+% (\cjk{会社更生法})
+
+Apart from satellite, things are very much as they were in the early 1960s. However, during this period communications technology has changed beyond recognition. New distribution possibilities have thrown the broadcast industry's problems into stark relief, the external world has overtaken the television business and `[b]roadcasters must evolve or die'.\footnote{front cover headline, \TYKZ, 19 Feb 2011}
+
+The summer 2011 switch from analog to digital terrestrial television (DTTV)\footnote{The system in use in Japan, and adopted throughout most of South America is known as Integrated Services Digital Broadcasting-Terrestrial (ISDB-T). Other standards are DVB, developed in Europe, and the US system ATSC. DTTV is a generic term for all forms of digital terrestrial television.} broadcasting --- a rare and significant industry-wide event --- is an appropriate point to sum up the situation of the commercial television broadcasting industry in Japan and to address the changes that may take place in the coming years.
+
+\paragraph*{Sources}
+
+Recent English-language works looking at Japan's mass media from a business perspective are rare. The standard introductory text\footcite{Cooper-Chen:1997} is outdated considering recent \st{rapid} changes in technology, and while Valaskivi's \st{recent} review\footcite{Valaskivi:2007} updates much of the above, as a research report it \st{cannot have} \textbf{lacks} the depth of a book-length work. The edited volume \emph{Media and Politics in Japan}\footcite{Pharr:1996} is also showing signs of age, much of the content looking back to the upheavals of the 1993 general election, though Westney's chapter on media businesses covers valuable background and highlights many issues which are still relevant. More recently, Kwak's work on satellite broadcasting and regulation offers a clear explanation of the regulatory tangle that governs \st{the activities of broadcasters} \textbf{broadcasting} in Japan.\footcites{Kwak:2008, Kwak:1999}
+
+More works are available in Japanese; \st{numerous} industry handbooks\footcites{Nakano:2008, Nishi:2007,Tanami:2006,Takahashi:2001}, often aimed at students looking for a career in the media, offer factual overviews with minimal interpretation, industry yearbooks and handbooks, such as those produced by \emph{Minkan Hōsō Renmei} (MHR)\footnote{Japanese commercial broadcasters' industry association.} and national broadcaster \emph{Nihon Hōsō Kyōkai} (NHK), are also useful data sources and present the industry view of developments. However, for this reason they cannot always be relied on \st{exclusively} as a basis for interpretation.
+
+Recent writing on the television industry has naturally concentrated on digitalisation, with works either \st{tend to fall into two camps, those that} extolling the (potential) virtues of the digital society \st{and those} \textbf{or} offering sensationalist portrayals of a nation of blacked-out television screens as the digital promise fails. Although the move to digital, which started in 2001, has already had some material effects on the broadcast industry it is still early \st{in the game} for academic analysis, though a small number of works do exist which offer an industry-wide media-as-business approach.\footcites{Yuasa:2006, Matsuoka:2004}
+
+Throughout this study I refer to \st{material from} sources sometimes, justifiably \st{and not without reason}, deemed \st{not to be particularly} less than reliable, such as the \textit{sh\={u}kanshi} weekly magazines \textit{Friday} and \textit{Sh\={u}kan Gendai}. The nature of the mass media in Japan, the integration of the large television and newspaper companies and their reliance on government sources for information, tends to mean that, in the mainstream press, critical reporting on the media is uncommon, thus my reliance on the less inhibited magazine and industry press.
+
+\subsection{Varieties of television broadcasting}
+ 
+This section \st{aims to make clear} \textbf{outlines} \st{the} interrelationships between the various technological forms of television available to viewers in Japan. My focus is terrestrial broadcasters, as the dominant suppliers of television programming and the main delivery system, alternative delivery methods are mentioned here only in as far as they have an impact on their conduct.
+
+\subsection{Terrestrial broadcasting}
+\label{subsec:terr-tv}Terrestrial broadcasting can be viewed as split into two fundamentally different types of business:
+
+\begin{close_item}
+\item Larger stations based in Tokyo (known as `key-stations' (\textit{kii-kyoku})), Osaka (`sub-key-stations' (\textit{jun-kii-kyoku})) and Nagoya.
+\item Smaller local broadcasters outside these areas, known as \emph{keiretsu-kyoku}. 
+\end{close_item}
+
+In licensing and coverage terms there are three \emph{wide broadcast areas} (WBAs), \emph{Kant\={o}}, around Tokyo, \emph{Kinki}, based on Osaka and \emph{Ch\={u}ky\={o}}, around Nagoya, and 29 smaller areas, mostly congruent with Japan's prefectures. %(see fig.\,\ref{fig:areamap}). 
+
+In this study I treat the broadcast industry as divided into two tiers, a first tier \st{consisting} of \st{those} firms within the WBAs and a second tier of smaller non-WBA firms, regulatory structures do not make this formal distinction. These tiers are linked in `informal' networks which grew out of news exchange agreements initiated in the late 1950s. Network arrangements have gradually led to mutual reliance; 
+
+\begin{close_item}
+\item of local broadcasters on key-stations for programming and revenues and 
+\item of key-stations on local broadcasters for distribution.\citej{140}{Sugaya:2000} 
+\end{close_item}
+
+Over the last two decades this latter relationship has been eroded by changes in distribution technologies, the former however has continued intact. The resulting imbalance has led to questions about the future of the broadcasting system as extant, especially the role of the second tier. The combination of the economic effects of investment in digitalisation and falls in advertising revenues {\bf since the 2008 world-wide economic downturn} \st{in post-`Lehman Shock'} has \st{led to} accentuated tensions between the tiers and highlighted the shortcomings of a system in need of renewal.
+
+%\begin{figure}%FIGURE:AREAMAP
+%\begin{center}
+%\includegraphics[width=0.8\linewidth]{areasmap.jpg} 
+%\caption{WBAs and non-prefectural broadcast areas in Honshu.\label{fig:areamap}}
+%\end{center}
+%\end{figure}
+
+\paragraph{Network infrastructure} 
+Broadcasters are arrayed in networks, materialised through program, news and information sharing agreements, these consist of a number of hierarchically arranged stations with a Tokyo station at the hub (see tab.\,\ref{tab:networks}). The existence of the WBAs, along with two (possibly three\footnote{Kagawa-Okayama, Tottori-Shimane and, less formally integrated, Fukuoka-Saga}) further non-prefectural areas divides Japan into 32 broadcast areas. There are four genuinely national networks, JNN, NNN, FNN and ANN, the fifth \st{network}, TXN, consists of six stations strategically placed to maximise coverage. Each network has ties of various kinds and strengths with one of Japan's large newspapers. 
+
+Signal distribution is via some 2300 installations housing relays for each station, \st{in total }some 11,000 pieces of transmitting equipment.\footnote{\emph{Chih\={o}-bunken Kaikaku Suishin Iinkai} [Committee to Promote Decentralisation Reform], `Dai-39 iinkai kanren setsumei shiry\={o}' [39th Meeting Explanatory Documents], \url{www.cao.go.jp/bunken-kaikaku/iinkai/kaisai/dai42/42shiryou13.pdf}, p2 (accessed 20 June 2011)} {\bf On 24th July 2011 the analog television service distributed via this equipment since 1953 was replaced throughout nearly the whole of Japan} by a digital equivalent.\footnote{\bf In the three prefectures affected by the tsunami of 11 March 2011 analog broadcasting will continue until 31 March 2012. `Hisaichi 3ken no chidejika, rainen 3gatsu31nichi ni sōmusho hōshin' [MIC plan: digitalisation in three disaster affected prefectures postponed until 31 March next year], \emph{Asahi shimbun}, 6 July 2011, \url{www.asahi.com/showbiz/tv_radio/TKY201107060179.html} (viewed 7 July 2011)} %
+
+\begin{table}[t]%TABLE:NETWORKS%%%%%%
+\footnotesize
+\begin{center}
+\begin{tabular}{lllcl}
+\toprule
+Tokyo key-station & Osaka sub-key & Newspaper & \multicolumn{1}{l}{Network Affiliates} & Network \\ 
+\midrule
+TBS (Tokyo Broadcasting Systems) & MBS & Mainichi & 28 & JNN \\ 
+NTV (Nippon Television) & YTV & Yomiuri & 30 & NNN \\ 
+Fuji TV& KTV & Sankei & 28 & FNN \\ 
+TV Asahi & ABC & Asahi & 26 & ANN \\ 
+TV Tokyo & TVO & Nikkei & 6 & TXN \\ 
+\bottomrule
+\end{tabular}
+\caption{Broadcaster networks, affiliates and linked newspapers \newline \footnotesize Source: MHR, \textit{H\={o}s\={o} Handobukku}, 339\label{tab:networks}}
+\end{center}
+\end{table}
+
+A number of cross-network broadcasters, taking programming from more than one network, exist in the less well provisioned areas. \textbf{They} \st{firms but} have become rarer since the last round of company formation in 1991--7\footnote{\textit{Minp\={o}ren Nenkan 2010} [MHR Yearbook], 732}, having been superseded by these network-affiliated `New Heisei Stations' (\textit{Heisei shin-kyoku}). Terrestrial broadcasters are represented at national level by their industry association, \textit{Minp\={o}ren}, a contraction of \textit{Minkan H\={o}s\={o} Renmei}.\footnote{Known in English as The National Association of Commercial Broadcasters in Japan, abbreviated to NAB. To avoid confusion with parallel US organisation, also the NAB, I refer throughout to this organisation as MHR.}
+%such as Oita (TV Oita; NNN and FNN) and Fukui (Fukui Broadcasting: NNN and ANN)
+
+\paragraph{Geographical Licensing} Broadcasters are licensed by the Ministry of Internal Affairs and Communications (MIC) on the basis of geographical areas, limited (theoretically) by either prefectural or other administrative boundaries. %In practice it is impossible to accurately control who receives signals (the Kyushu-based broadcaster I researched had been contacted by listeners as far away as South Africa and Norway who had picked up their AM radio transmission), radio spectrum signals travel in a straight line until something physically stops them or they are so attenuated as to be unreceivable. 
+Reality is more complex, television signals do not stop at administrative boundaries and terrestrial broadcasters' signals are often redistributed outside the licence area by cable operators. 
+
+With many \textbf{viewers} accustomed to the internet as an effectively boundary-less distribution channel, the current geographic-administrative-based licensing scheme for television looks outdated (see sec.\,\ref{netdistrib}). %As a Japan-based researcher it is easier for me to watch television from the UK than it is to watch channels from the neighbouring prefecture.
+
+
+%This paper considers, for reasons that I make clear, this type of broadcasting to be effectively an industry emerging from the activities of two different types of broadcasters; although not legally differentiated, the scope, potential and activities of the larger WBA-based companies, especially the `Big Five' Kanto WBA companies (the first-tier), can be distinguished in significant ways from those of the local broadcasters (the second-tier) that make up, in numerical terms at least, the majority of organisations in the industry. The futures of these two tiers are intimately linked.
+
+\subsection{Satellite broadcasting}
+At the end of the analog era there were four types of satellite broadcasting in Japan; analog and digital services distributed by broadcasting satellite (BS) and digital signals distributed by two different communications satellites\footnote{One of these satellites is in the same position as the BS satellite, thus subscribers can receive both BS and CS broadcasts on one dish, though they still need separate tuners.} (CS), these services require \st{the viewer to purchase and install specialised} \textbf{appropriate} receiving and decoding equipment. 
+
+\paragraph{BS} BS ceased analog broadcasting (12 channels) at the same time as terrestrial television, the number of available channels, all digital, is to be increased to 29 by Spring 2012.\footnote{`\,``Chideji-ka-g\={o}'' ni nani ga okoru?' [`Post-digitalisation': what will happen?], \TYKZ, 19 Feb 2011, 39} \textbf{At the time of writing, BS channels are largely provided by the same key-station broadcasters who dominate terrestrial channels}. In March 2010 27.5 million households, just over half of all households in Japan, had access to BS broadcasts.
+
+%:REVISION-CS
+\paragraph{CS}{\bf CS broadcasting has a complex history reaching back to 1990, the result of which is that the dominant player is Sky Perfect JSAT (SPTVJ), an amalgam of Sky TV, PerfecTV and JSAT. As of August 2011, 3.77 million subscribers took one of its four services.\footnote{SPTVJ news release: \url{www.sptvjsat.com/images/jp/news_release/1667/110902_1108kanyuukensuu.pdf} (accessed 5 Sept 2011)}
+}
+
+{\bf The business and licensing structures legislated to manage CS broadcasting created two separate categories of firm, program supply (\emph{intaku hōsō jigyōsha}, consignor broadcasters) and program distribution (\emph{jutaku hōsō jigyōsha}, consignee broadcasters). In this respect it is fundamentally different from terrestrial broadcasting where `vertical integration' is the norm. Relations between these two types of business and their customers is managed by another type of business, the `platform'. However, the exact role of the `platform' company, SPTVJ whilst key to the operation of CS services, is legally ambiguous.\citej{73}{Kwak:2008}
+
+All SPTVJ-provided channels are subscription, either bundled or as individual channels; four separate services provide access to up to 350 channels. Channel content is a mixture of international brands (Discovery, Disney, CNN, Fox), content specifically oriented towards Japanese viewers (e.g. Takarazuka Sky Stage, a \emph{jidaigeki} samurai drama channel) and general channels provided by the major terrestrial broadcasters.
+
+%As of September 2011 SkyPerfectJSAT had a total of 3.77m subscribers for its various services.\footnote{Website, news release:\url{http://www.sptvjsat.com/images/jp/news_release/1667/110902_1108kanyuukensuu.pdf}}
+
+\bigskip
+
+Despite initial hopes that satellite broadcasting might encourage participant diversity, BS \st{satellite broadcasting} remains dominated by the big terrestrial broadcasters, for commercial reasons unenthusiastic about splitting the advertising pie further and unable to fund new channels through subscriptions.\citej{82--3}{Kwak:2008} On the CS side, SPTVJ provides access to a broader range of channels though viewership is limited.}
+
+\subsection{Cable television}
+
+At the end of 2010 Japan's cable television companies (530 large-scale, 45,000 `village-based'\footnote{Data for this section is taken from MIC, `K\={e}buru terebi no genj\={o}' [Survey of Cable Television], Dec 2010, \url{www.soumu.go.jp/joho_tsusin/pdf/catv_genjyou.pdf} (accessed 20 June 2011)}) provided services for 32.6 million households. Of these, roughly 25 million receive, as well as \st{the} terrestrial channels, programming produced by the cable operator, often local news and information programs. Just under 8 million use cable \st{as a means} to receive \st{delivery of} terrestrial broadcasts. 
+
+%As well as 530 or so large regional operators (serving at least 501 households), there are 45,000 small-scale `village-based' operators. The majority of these are there to ensure \st{the} delivery of television to places which cannot receive broadcast signals.
+
+Many operators, supported by public spending, are offering a continuation of analog services after 24 July 2011 by providing customers with a analog signal back-converted from digital\st{ in addition to the normal digital services}. This will allow households to carry on using older non-digital receivers until this service is discontinued in Spring 2015. 
+
+\subsection{Net distribution}
+\label{netdistrib}
+Net distribution, both simulcasting and video-on-demand-style program replay, has so far failed to make an impact in Japan. A number of causes have been cited: 
+
+\begin{close_item}
+\item television has been, whether license fee-funded PBS or ad-funded commercial, free at time of viewing, audiences are resistant to pay-per-view systems;
+\item traditionally vague handling of copyright means that re-airing of back-catalog programs can be difficult in the face of protests from program participants;
+\item for commercial channels, coming to arrangements for recycling of programs with their original sponsors/funders has proved problematic.\footnote{`Terebi gy\={o}kai: 10 no gimon' [10 questions for the broadcast industry], \TYKZ, 19 Feb 2011, 53\label{note:gimon}} 
+\end{close_item}
+
+However, media commentator Ikeda Nobuo describes broadcasters in Japan as actively attempting to obstruct the use of alternative, specifically internet, distribution of television programs. This, he argues, in order to preserve the value of investments in physical distribution infrastructure made since the 1950s.\footnote{Ikeda Nobuo, `Rieki wo umanai chideji-ka: Suishin sareru riy\={u} to h\={o}s\={o} no sh\={o}rai' [Unprofitable digitalisation: reasons for its promotion and the future of broadcasting], \emph{Journalism} (247) Dec 2010, 18\label{ikeda}} 
+
+Hirose Michisada, MHR Chairman and CEO, has made the industry position regarding internet distribution very clear: `We already have an infrastructure for free delivery of television programs across more or less the whole country, its called terrestrial broadcasting, so, we are not considering adding net simulcasting to this.'\footnote{`Tomaranai ``make no rensa'': Kuzureru terebi-kyoku ry\={u}ts\={u}dokusen' [Unending `chain of defeats': television companies' collapsing distribution monopoly], \TYKZ, 19 Feb 2011, 47\label{note:rensa}}
+
+Some companies do make their broadcasts freely available online, at a very reduced audio and video quality, via the KeyHoleTV P2P service.\footnote{KeyHoleTV website: \url{www.v2p.jp/video/index.html} (accessed 11 May 2011)}  
+
+\section{Digitalisation}
+\label{digitalisation}
+
+The benefits, social and commercial, of integration between television broadcasting and IT/computing that digitalisation seems to offer have been discussed, and enthused over, since the late 1980s.\citej{Sec.\,2}{Brinkley:1997} However, the power balance between broadcast and computing in the intervening years has shifted. In an environment where a computer that shows television programs (and does all the other things a computer is expected to do) is a reality, television has to \st{redefine its role} \textbf{rethink its place}. 
+
+% The forces that shape the future of the television industry, industry executives and major shareholders, industry representative bodies, the politicians and administrators  who shape government policy, will through a process of consultation, balancing of economic and cultural power, settling of personal scores, come gradually to an agreement on the future role of television; what this role will be cannot be discussed here.
+%it will of course depend on factors external as well as those internal to the industry and industry policy, after all commercial television is dependent on the state of the general economy, and budgets affect content in a very direct way.
+
+{\bf The question of the future role of television is in many sets of hands, station executives, programme makers, advertisers with a choice of competing media, and perhaps primarily, administrators, whose control of the legal structures is pivotal. The process of interaction between theses parties will be complex, and with the added unknowns of developments in technology and trends in media use, any attempt to predict the mid- to long-term for the television industry is rash.}\st{Rather than attempt to predict the future role the television industry will choose for itself} {\bf This section is therefore limited to summarising} forecasts made for the direct financial effects of Japan's introduction of DTTV. 
+
+Government estimates that the total economic impact over the two decades 2001--21 will be \st{in the region of} \textbf{some} \ty249 trillion.\footnote{\bf `Chijō dejitaru hōsō he no ikō ni tomonau keizai-kōka nado ni kansuru kenkyūkai hōkokusho'  [Report of the research group into the economic effects of a move to DTTV] \url{www.soumu.go.jp/main_content/000022282.pdf}, p55 (accessed 31 August 2011)} This includes the effects of the actual shift to digital technology for broadcasters and consumers, estimated effects on other related services industries, \st{such as }DVD manufacturers, internet and mobile distributors, data broadcasters, and finally, the broader effects of the freeing up of spectrum space\st{previously used for analog television}.
+
+%\cjk{地上デジタル放送への移行に伴う 経済効果等に関する研究会 報告書}
+%:REVISION-Follow Money!
+%Possibly add small section on where the money has gone - performance of electronic goods manufacturers and retailers? Traditional emphasis of Japanese economy on making stuff! 'Monodzukuri' and its ideological significance. Also trade emphasis on exporting. A samurai would never make software!
+
+\bigskip
+{\bf 
+However, benefits will not be distributed evenly across all interested parties, while there are evident and immediate gains for some industries, others must feel themselves manifest losers.
+
+Potential large-scale beneficiaries of the move to digital will include: 
+\begin{description}
+\item [Mobile telecoms operators] will gain access (potentially) to the spectrum freed up by reducing broadcasting use. This is vital for mobile operators if they are to be able to sell the next generation of 4G services, data-oriented and bandwidth-hungry, to consumers.
+\item [Manufacturers of electrical goods] the four largest domestic home electronics companies (Sharp, Sony, Panasonic and Toshiba), with near total dominance of the domestic market (and major exporters), have seen demand for their products soar since 2005. In 2000--06, yearly sales of tv-sets were just under 8.9 million, in 2009 the figure was 13.6 million and in 2010, 25.2 million, sales for the months of the first half of 2011 were up yet again on the previous year.\footnote{Japan Electronics and Information Technology Industries Association (JEITA) shipments data: \url{www.jeita.or.jp/english/stat/shipment/2011/}} While it is hard to separate out and quantise the specific effects of digitalisation on their overall performance, this stimulus to domestic demand may have helped insulate companies at a time when overseas markets might be affected by worldwide economic downturn.
+\end{description}
+
+Some gains may filter through to broadcasting by way of an increased willingness to advertise on television. Both mobile telecoms and electronics manufacturing are large-scale advertisers; the telecommunications sector, which includes mobile operators, is the nation's fifth largest advertiser by spend (\ty203billion, 7.2 percent of national annual total in 2009), two thirds of this goes into television advertising.\citej{202}{JMH:2011} %and tv's fourth largest advertiser by time, (in 2009 6.2 million seconds in the WBA regions)
+%:JMH cite
+
+\bigskip
+
+On the other hand, broadcasters and viewers must have an ambivalent view of the value of digitalisation. Neither has much initially to gain from digitalisation, they will both make significant investment and get in return (technically) better audio and video quality. It is decidedly unlikely that broadcasters will be able to command a better price for advertising broadcast in HD given that it is the de facto DTTV standard. Viewers who have invested in a new receiver, and possibly also an antenna, will, for that price, be able to carry on watching television, albeit less will have been spent on the content they have available. 
+
+%The electronics industry on the other hand no doubt saw this transfer of funds as a positive development; from a government point of view the prioritisation of the health of a export industry - electronics - over that of both consumers and an economically minor yet irritatingly influential industry such as broadcasting is not hard to explain.
+
+Broadcasting while it has the potential to influence public opinion, thus allowing it to punch above its weight politically, is relatively insignificant in economic terms, estimates of the broadcasting market size are in the region of \ty3.9 trillion, one-tenth that of electronic manufacturing.\citej{28, 126}{Miyazaki:2011} Any one of the electronics firms mentioned above employs more full-time workers than the whole of the broadcasting industry put together.\footnote{Compiled from Yahoo Company Profiles: \url{profile.yahoo.co.jp} (accesses 7 October 2011)} In decisions on DTTV policy, the broad financial interests of the electronics sector seem to have trumped the latent trouble-making capacity of a disgruntled broadcasting industry.
+}
+
+\paragraph{Public spending} \st{The cost of }Going digital has \st{been} \textbf{involved} significant \textbf{costs}; total government spending \st{in supporting the move}, \st{including the setting up of } \textbf{on} support and call centres, provision of grants for upgrade and renewal of reception equipment, provision of digital tuners to low-income households and financial support for broadcasters, is expected to be in the region of \ty66 billion, in FY11 alone\footnote{MIC, `Chijo-dejitaru h\={o}s\={o} he no enkatsuna ik\={o} no tame no kanky\={o} seibi, shien. Heisei 22-nendo yosan-shoy\={o}gaku no naiy\={o}' [Support and Environment Preparation for a Smooth Change to DTTV. Outline of 2010 Supplementary Budget measures], Jan 2010, \url{www.soumu.go.jp/main_content/000051838.pdf}\label{note:enkatsu} (accessed 20 June 2011)}, down on the previous year's\st{ budget of} \ty87 billion.\footnote{Kamei Hiroshi `Chideji no detarame. Dai-2kai' [Digital Television Nonsense. Part 2], \emph{Friday}, 14 Sep 2010, \url{gendai.ismedia.jp/articles/-/1144}\label{note:deta2} (accessed 20 June 2011)}
+
+While not exactly giving sets away free, central government has \st{been willing to} \textbf{committed} considerable resources to ensuring a minimum number of `radio-wave refugees'\footnote{`Viewers mustn't end up as ``radio-wave refugees''\,' \emph{Daily Yomiuri}, 27 July 2008, 4}. The FY09 supplementary budget includes funding for the purchase of digital receivers by public offices, hospitals and schools (\ty150bn) and additional funding (\ty75bn) for the `Eco-Point' system, originally intended to \st{encourage purchases of} \textbf{promote} \st{more} energy efficient refrigerators and air-conditioners, to extend the scheme to digital televisions. In total, combining spending from the main and supplementary budgets, measures to ensure progress toward a trouble-free switch-over \st{to digital} in summer 2011 came to \ty420 billion.\footnote{`Hosei-yosan de k\={o}g\={u} sareru terebi no chideji-ka, 2-nengo niwa tada de terebi wo kubaru?' [Preferential treatment of digitalisation in supplementary budget: in two years time will they hand out televisions for free?], \emph{T\={o}y\={o} Keizai}, 22 July 2009.\\ \url{www.toyokeizai.net/business/society/detail/AC/6979df9eec4a3b1914a484548dc14255/}  (accessed 20 June 2011)}
+
+%Unlike NHK, legally bound to deliver signals to all of Japan, commercial broadcasters are obliged only to attempt this (\textit{doryoku gimu}). 
+
+In 2010 \st{digital signals were} \textbf{DTTV was} reported to have achieved 98 percent coverage but during this process a proportion of areas have been newly designated `new difficult-viewing areas' (\textit{aratana nanshi chiiki}), these three thousand or so areas contain roughly a third of a million households.\footnote{National Diet Library Issue Briefs: \textit{Chij\={o} dejitaru h\={o}s\={o} no genj\={o} to kadai} [Issues in Terrestrial Digital Broadcasting]\\ 2010: \url{www.ndl.go.jp/jp/data/publication/issue/pdf/0693.pdf}\\ 2008: \url{www.ndl.go.jp/jp/data/publication/issue/0613.pdf}\label{ndl-note}  (both accessed 20 June 2011)} Measures to deal with signal provision for these areas, setting up additional relays, shared antennae or cable facilities, mean more spending as subsidy applications come in.%\cjk{努力義務}  \cjk{あらたな難視地域}
+
+\bigskip
+
+%\hl{In the newly re-organised DVB-T spectrum, where has the money gone? A key driver has been the mobile media market who want the spectrum that will be freed by far more efficient use of spectrum in DVB.}
+
+%{\bf What is the mobile industry getting out of this? What is it putting in? How much is it expecting to make and in what ways?}
+
+{\bf There may also be gains for the public purse. In February 2011 an MIC committee was formed to consider how bandwidth freed up by the switch from analog to DTTV, already earmarked for `multimedia broadcasting' and mobile use, might be auctioned off to interested parties.\footnote{\emph{Shūhasū ōkushon ni kansuru kondankai} [Frequency Auction Discussion Group]. MIC website:\url{www.soumu.go.jp/main_sosiki/kenkyu/syuha/index.html} (accessed 7 Oct 2011)} Of course the results of any auction depend of how bidders assess the value of the product, in this case, how mobile operators assess the gains to be made from 4G services. In December 2010 mobile operator DoCoMo commenced provision of a 4G service (named Xi, pronounced `Crossy') in urban areas across Japan\footnote{DoCoMo press release: \url{www.nttdocomo.com/pr/2010/001481.html} (accessed 7 Oct 2011)}, take-up of this bellwether service may influence industry perceptions of the value of bandwidth at auction. 
+}
+
+\bigskip
+
+\st{While it might be pointed out that these c}\textbf{Costs to the public purse might be deemed} \st{are} negligible by comparison to the projected \textbf{economy-wide} long-term gains, \st{it must be born in mind that} \textbf{however,} they are real whereas the benefits are largely still speculative. {\bf Furthermore, whilst broadcasters have been forced to invest in renewing their entire infrastructure they stand to gain little if anything from digitalisation; it is unlikely advertisers will pay more to have their adverts distributed digitally, or indeed to have them distributed in HD rather than SD.} %Digital broadcasters now have the option of distributing additional channels at reduced bandwidths but the problem is content, spending on which is falling.
+
+\subsection{Broadcasters} 
+For \st{the} \textbf{broadcasting} \st{ industry } digitalisation has meant a significant \st{cash} investment and the replacement of equipment \st{at all stages of} \textbf{throughout the} production \textbf{process;}\st{, from acquisition to broadcast. This involves} the renewal of innumerable cameras, video-routers, transmitters, editing machines, satellite trucks, etc\st{and so forth}. This is on top of the renewal of the entire broadcast infrastructure required to distribute these digital signals (see sec.\,\ref{subsec:terr-tv}). In 2010 NHK expected to invest a total of \ty400 billion in its move to digital over the period 2001--13. The total for all commercial broadcasters was \ty1.04 trillion, for second tier companies average investment was expected to be approximately \ty5.4 billion per company. In 2006 these same companies averaged a yearly profit of \ty 0.35 billion\footnote{2010 NDL Issue Brief, p5, see n.\,\ref{ndl-note}}, even taking into account the extended \textbf{ten-year} period over which \st{ the }investments \st{are to be }  \textbf{have been} made\st{, ten years, } this scale of investment cannot but impact the financial health of the majority of broadcasters.
+
+The majority of investments are now made and the drop in production budgets, predicted by many in the industry\footnote{`Local TV May Lose in Digital Shift' \emph{Daily Yomiuri}, 2 Dec 2003}, do indeed seem to have materialised (see sec.\,\ref{program-makers}). A situation  exacerbated by decreases in advertising revenues after the post-2008 world-wide financial downturn (see sec.\,\ref{spot-time}).
+
+\subsection{The audience: receivers and consumers}
+\label{digi-viewers}
+For viewers digitalisation primarily means the replacement of analog television sets, roughly one per person in Japan, or the purchase of digital decoders which attach to their current analog sets. Many households may also require a new antenna, for those living in housing with a shared antenna (roughly a quarter of all households\footcite{Kimura:2007}) this generally means paying a share of the replacement costs. 
+
+A March 2010 MIC survey of digital receiver penetration shows a range of values for Japan's prefectures, from Toyama, Saitama and Gifu, all around 88 percent, to the lower levels found in Okinawa (65.9), Iwate (66.7) and Nagasaki (72.9). Mean penetration is 82.4 percent. Typically then, 14 months before the end of analog television services, nearly one household in five was without digital receiving equipment. By September, \textbf{surveyed} penetration had increased to just over 90 percent. 70 percent of those surveyed as to why they had not yet purchased digital receiving equipment gave reasons equating to `there's still plenty of time left', but 40 percent blamed the price of a new set.\footnote{Ministry of Internal Affairs and Communications email newsletter: MIC Communications News, Vol. 21 No. 11, 24 Feb 2011}
+
+However, MIC's survey methodology, and thus also the optimistic conclusion it draws, has been repeatedly called into question. The survey tends to reflect the position of those households willing to be questioned about their moves to digital and, more critically, it excludes those over 80 years of age. According to a 2009 report from the Nomura Research Institute, the switch to digital may lead to a loss of ten percent of current viewers; this ten percent have little intention of `going digital', at least in terms of buying a new television set or digital tuner.\footnote{see p46 of n.\,\ref{note:rensa}}  Kawamura Makiko of \textit{Shufuren} (Housewives Union) and member of an MIC digital take-up related consultative committee, estimates that the true level of digital viewership is closer to 60 percent.\footnote{Kamei Hiroshi, `Chideji no detarame. Dai-1kai' [Digital Television Nonsense. Part 1], \emph{Friday}, 4 Sep 2010, \url{gendai.ismedia.jp/articles/-/1118}\label{note:deta1}  (accessed 20 June 2011)}
+
+Roughly one-quarter of those households who cannot currently receive digital television, either because signals do not reach them or they do not have an appropriate set, said they did not intend to make arrangements to watch digital television as they `don't watch that much'. It has also become clear that the penetration rate of digital sets varies greatly with household income, policies are in place to provide financial assistance in purchasing new sets, or digital tuners that connect to analog sets, to low income households (perhaps confirming the cynical observation that `if people didn't buy tv-sets, the government would give them away for free'\citej{25}{Barnhurst:2001}). Take-up on this scheme has been slow; of the 2.7 million eligible households, 0.63 million applied in 2009, and the first half of 2010 saw just 0.22 million applications.\footnote{see n.\,\ref{note:deta1}}
+
+\bigskip	
+
+The corollary of the mass purchase of new sets is the necessary disposal of roughly the same number of old CRT sets, for 2011 alone JEITA is projecting the need to recycle approximately 13.2 million sets. However, domestic production of CRTs, which had previously taken up much of the recyclable waste from television set disposal, has now ceased and given that the glass used in CRTs contains lead, the disposal of such large amounts may be problematic. Since 1998 the costs of recycling have been offset by charges paid by the owner, along with manufacturers and vendors, under the Household Electricals Recycling Law\footnote{Popularly known as the \textit{Kaden risaikuru h\={o}}, correctly the \textit{Tokutei katei-y\={o} kiki sai-sh\={o}hin-ka h\={o}}.  \url{www.meti.go.jp/policy/kaden_recycle/case2/pdf/03.pdf}  (accessed 20 June 2011)}, a reluctance to pay these charges (in addition to the cost of purchasing a new digital-compatible set) may worsen the rate of fly-tipping of CRT sets already visible in data for 2007.\footnote{see n.\,\ref{note:deta2}}
+
+\section{Key-stations: first-tier broadcasting}
+\label{key-finances}
+
+\subsection{Changes in key-station finances}
+\label{spot-time}
+
+The majority of commercial broadcasters' income in Japan, 75.9 percent in 2009,\footnote{\emph{MHR Yearbook 2010}, 123} comes from selling advertising, or, perhaps more accurately, selling audiences to advertisers. This section looks at recent trends and the effects on broadcasters' finances.
+
+Since 2005, television's share of total national advertising spend has stayed roughly constant at between 28 and 30 percent, but in cash terms it has declined from \ty2.04 trillion to just above \ty1.71 trillion in 2009.\footcite{JMH:2011} Traditionally advertising income has made up roughly 80 percent of broadcasters' income but recent declines have meant they have had to look to other areas of their business to cover costs. In 2009 TBS Holdings' income from its property business brought in almost as much as domestic program sales.\footnote{TBS Holdings, `2010nen 3gatsu-ki dai-2shihanki kessan shiry\={o}' [March 2010 Statement of Accounts], \url{www.tbsholdings.co.jp/pdf/setsumei/setumei200911_2.pdf}  (accessed 20 June 2011)}
+
+\bigskip
+
+Television advertising in Japan comes in two types; `time' (\emph{taimu}, also known as `program advertising', \textit{bangumi CM}\,) and `spot' advertising. Time advertising is effectively program sponsorship and involves the sponsor in funding production and distribution of a program which acts as a container for their advertising. Spot advertising goes in the gaps between programs. A time advertiser is locked into a particular financial commitment and will pay significant sums up front. This can involve a degree of risk as new programming may not gain sufficient ratings to be viable. The typical ratio between spot and time income for the key-stations is roughly 70:30.\citej{155}{Nakano:2008}
+
+Between 2009 and 2010 time advertising revenues for the key-stations, which account for over half of all television advertising sales, fell by 15.4 percent, the largest single year fall since FY93's 5.2 percent fall which followed the collapse of the bubble economy. Spot advertising fell by 10.6 percent.\footnote{Kimura Mikio, `Chideji-ka to uriagegen de minp\={o}-terebi no hans\={u} ga akaji-ka' [Half of local broadcasters in the red after digitalisation and fall in sales], \emph{Journalism} (236), Jan 2010, 13-14\label{note:uriagegen}} However, industry opinion is that television advertising overall is undergoing a process of `spot-isation',  perhaps accounting for the disparity in rate of decrease in the two types.
+
+Unsurprisingly in {\bf the} recent \st{post-`Lehman Shock'} years {\bf of economic downturn}, fewer businesses are prepared to take on \st{the medium-term commitments which come with} time advertising. Time contracts are also tending to shorten, whereas previously a 6-month contract period was the industry standard, now \st{contract} periods as short as one month are beginning to appear. This change has apparently also been fuelled by the mandatory quarterly reporting requirement introduced in 2008.\footnote{`Oikomareru terebi no setogiwa' [Troubled television on the brink], \emph{Sh\={u}kan Daiyamondo}, 15 Jan 2011, 47} Overall this has meant a move toward \st{an increase in the amount of} \textbf{more} spending on spot advertising, which allows advertisers more budgetary flexibility and the possibility of refining advertising strategies to target specific periods and audiences. However, from the broadcasters' perspective `spot-isation' is equivalent to an increase in instability of income.\footnote{Ogawa K\={o}ji, `Terebi-k\={o}koku wo torimaku tay\={o} na henka' [Various changes in television advertising], \emph{NHK H\={o}s\={o} Kenky\={u} to Ch\={o}sa}, Oct 2010, 107}
+
+Total advertising spend, particularly the more liquid spot market, is strongly and directly related to conditions in the broader economy, especially corporate earnings,\footnote{Kimura Mikio, `Gy\={o}seki-kaifuku ni tenjita minp\={o}-terebi motomerareru keiei no k\={o}ritsu-ka' [Management efficiency improvements needed for commercial broadcasters as performance recovers], \emph{Journalism} (247) Dec 2010, 46\label{note:kaifuku}} and there is little broadcasters, as an industry, can do to increase the absolute size of the advertising pie. Self-preservation means therefore competing for a larger slice against other media, chiefly the internet whose share continues to grow (see sec.\,\ref{netdistrib}).
+
+\subsection{Shrinking production budgets}
+\label{program-makers}
+80--90 percent of key-station income is from advertising, how this is priced depends on the viewership a particular time slot draws, which is in turn dependent on the scheduled programming. 
+
+Commercial broadcasters rely for their continued existence on drawing in audiences with attractive programming, these programs \st{all have to} \textbf{must} be conceived, funded, planned and produced. While the first three of these functions generally take place within the key-station, the final step (barring actual broadcast) relies on outside production companies and their workers.\footcite{Tanami:2006}  These companies are generally small-scale and often reliant on temporary workers, wages tend to be low, \ty2--3 million p.a. (\pounds 15--22K, US\$24--36K\footnote{calculated at \pounds1=apx.\,\ty130, US\$1=apx.\,\ty80}), and poor working conditions lead to high staff turnover. A 2005 MHR survey suggests there are in the region of 11--1200 production companies in Japan, though the Japan Fair Trade Commission (JFTC)\footnote{JFTC, `Media kontentsu sangy\={o} de no ky\={o}s\={o} no jittai ch\={o}sa' [Survey of Competition in the Media Content Industry], July 2007, \url{www.jftc.go.jp/cprc/english/cr-0207.pdf}  (accessed 20 June 2011)\label{note:jftc}} points out that precise numbers are unknown. 70 percent of firms employ less than 50 people, over half are based in the Tokyo area. 
+
+The edifice of national broadcasting is built upon a singularly unstable foundation. Recent years have seen production budgets cut and there are signs that this foundation may have reached its load-limit.
+
+\bigskip	
+
+As a rule only 20--30 percent of `time' spending, \st{that is }program sponsorship, \st{actually} reaches program producers, the rest being siphoned off along the way down the television power structure.\citej{60}{Nishi:2007} First, the large advertising agencies that stand between broadcaster and sponsor take fees of 10--15 percent, key-stations take another 5 percent, half the remainder goes towards payment of \emph{network distribution fees} (NDF)\footnote{See section \ref{net-finances} for a fuller discussion of NDF.\st{ and network station financing.}} The remaining one-third or so is passed down to a primary production contractor (\emph{moto-uke}) who typically sub-contracts to a number of smaller companies (\emph{mago-uke}). The amount reaching these \emph{mago-uke} companies may be less than 10 percent of the sponsor's original spend.
+
+Between 2006 and 2009 the key-stations reduced production spending by 16 percent, the Osaka stations by over 20 percent.\footnote{See p51 of article in n.\,\ref{note:kaifuku}. Based on MHR data.} This level of cuts is confirmed in interviews with staff from production companies.\footnote{`Seisaku genba de nani go okite-iru ka' [What is Happening on the Production Floor?], \hrpt, Mar 2010, 2--5. Also, Kubota Masaki, `Jakusha no gisei de y\={o}yaku naritatsu yuganda terebi-bangumi seisaku no uragawa' [Behind the Scenes of Twisted Television Production: Sacrificing the Weak to Make Ends Meet], \emph{Sh\={u}kan Daiyamondo}, 15 Jan 2011, 53--4\label{note:jakusha}} 
+
+Cuts may indicate a trimming of unnecessary `fat' but if the result is further falls in program quality, long-term effects may be diminishing viewership figures and reduced viewer satisfaction ratings. And, at the other end of the process, a loss of production capacity as small production companies either close, under financial pressure, or find themselves unable to hold on to workers due to a reduced ability to pay competitive wages.\footnote{see n.\,\ref{note:jakusha}} 
+
+There is little independent producers can do to ward off cuts, they are relatively powerless in regard to the broadcasters that commission their work\citej{112}{Nakano:2008} and who seem willing to use this position to squeeze smaller companies for whatever savings can be made. \textit{Gendai Bijinesu} quotes a a member of a key-station sales staff as follows: 
+\begin{quote}
+For example, for a 2-hour Saturday `wide-show' the sponsor used to put up \ty35 million, now that's been pushed down to \ty26[million]. Cuts in production costs of 20--30 percent are normal. We're forcing subcontractors into cuts, `Make 50 percent cuts or we'll take our business somewhere else'. Of course program quality is going to fall.\footnote{`\,``Uriage-hangen, seisakuhi \={o}haba katto, chih\={o}kyoku kaimetsu, kii-kyoku higeki'' to iu terebi-kyoku no genjitsu' [Sales Halved, Production Budgets Slashed, Local Stations Devastated: the True State of Television], \emph{Sh\={u}kan Gendai}, 8 April 2010, \url{gendai.ismedia.jp/articles/-/426?page=2}\label{note:kaimetsu}  (accessed 20 June 2011)}
+\end{quote}
+
+Hayama Hirotaka worked as an `assistant director' (\emph{AD}, `runner' in UK terms) on a prime time variety show in 2005--6, \st{he recorded} his working hours for the latter half of 2005\st{, these } ranged between 382 and 509 hours per month, typically 14--17 hours per working day with 1--4 days off per month. The AD is, in production terms, `at the bottom of the heap', his story illustrates the long-hours culture and poor conditions taken for granted in television production in Japan.\footcite{Hayama:2010} Even with five years experience many ADs may \st{be} earn\st{ing} as little as \ty50,000 (apx.\,\pounds380, US\$610) per month.\citej{85}{Tanami:2006} 
+
+Ultimately, broadcasters rely on this unstable base of labourers for program production. Workers in small production companies may be initially attracted by the `glamour' of television\citej{51}{Shimazaki:2009} but if production budgets continue to be cut in order to prop up broadcaster profits, they may well trade the glamour for more stable and better paid employment in other industries.
+
+%The \textit{Hakkutsu!Aruaru daijiten} incident\footnote{In January 2007, a pressured \emph{mago-uke} company was found to have faked data during the making of a popular science program. The subsequent inquiry held the key-station producer partly responsible due to his failure to properly oversee production.\\`Hakkutsu!Aruaru daijiten' Ch\={o}sa Iinkai: Ch\={o}sa H\={o}kokusho [Inquiry Report], \url{www.ktv.co.jp/info/grow/pdf/070323/chousahoukokusyo.pdf}, 99.\label{hakkutsu}  (accessed 20 June 2011)} can be seen as a consequence of two factors, the production budget cuts outlined above and pressure on key-station staff to work harder in order to justify their high wages (see sec.\,\ref{subsec:highwages}). Evidently there is a limit to how far production costs can be cut without consequences for those higher up the food-chain. Once this limit is reached, and suggestions are that if it has not already been reached then it will be soon, the next step will necessarily be to start finding ways of making cuts to that other primary cost, wages. Indeed this has already started happening.
+
+\subsection{Key-stations' high wage culture}
+\label{subsec:highwages}
+
+Typical wages for a married, 30-year-old key-station employee with one child are in the region of \ty350--480 thousand per month, ten years later they can currently expect to earn \ty420--920 thousand per month. On top of this bonuses, paid quarterly, may total up to half the annual wage and additional payments, such as allowances and overtime, may more than double the nominal wage. In 2008 a married, 35-year old TBS employee with two children working 50 hours overtime per month could expect to take home in the region of \ty13 million p.a. (apx.\,\pounds95K, US\$150K).\footnote{see p48 of article in n.\,\ref{note:gimon}} 
+
+Compared to Japan's average wage, just over \ty4 million p.a., an average wage earner at one of Japan's top-paying 30 television companies is comfortably off on about \ty10 million p.a. %(see fig.\,\ref{fig:wages}). - moved to separate file
+
+Amongst key-stations, TBS is making efforts to rein in wage spending; from April 2011 it is implementing a revised system aimed at limiting overtime payments. An insider quoted by \TYKZ{ } magazine states that typical monthly overtime is around 90 hours and that some workers notch up as much as 200.\footnote{see p48 of article in n.\,\ref{note:gimon}} The move to limit overtime payments to a maximum of 34 hours per month will no doubt reduce its wage bill, however, what effect it will have on staff morale and eventually actual production is unknown. TV Asahi, NTV and Fuji are making similar moves, though NTV's planned introduction of a new wage structure in March 2010 led to strike action (carefully planned not to upset output in any way) by 600 union members the following September.\footnote{`Nittere-r\={o}kumi, 24jikan suto he. Anauns\={a} wa jogai-kent\={o}' [NTV Union strike. Announcers exempted], \emph{Asahi shimbun}, 1 Sep 2010, \url{www.asahi.com/national/update/0901/TKY201008310548.html}. `Nittere-r\={o}kumi, 24jikan suto no totsuny\={u}. H\={o}s\={o} he no eiky\={o} wa genteiteki' [NTV Union 24-hour strike. Limited effect on broadcasts], \emph{Asahi shimbun}, 1 Sep 2010, \url{www.asahi.com/showbiz/tv_radio/TKY201009010200.html}  (accessed 12 Nov 2010, offline as of 20 June 2011)}
+
+\subsection{Relationship with local stations}%  
+\label{para:relwlocals}
+April 2008 adjustments to the Broadcast Law allowed broadcasters to \st{restructure themselves to} form holding companies. \st{So far, t}Two \st{network} key-stations, TBS (April 2009) and Fuji (October 2008) have made the change. These holding companies are, within \st{the} \textbf{existing regulatory} restrictions \st{of existing media concentration regulations}, \textbf{permitted} to own and invest in up to twelve other broadcasters. This legal shift, and the possibility of investment limits being raised from 20 to 33 percent in the near future, may be the \st{preliminary} groundwork which enables key-stations to take financially weak local broadcasters under their corporate wing (see sec.\,\ref{local-future}). Whether the hopes \st{apparently} embodied in these changes \st{will} materialise is down to the actions of broadcasters but it seems unlikely given the unstable condition of key-station finances.
+
+In early 2010, Ujiie Sei'ichiro, then president of NTV, admitted `[l]ocal broadcasters' financing/management is a big problem [{\ldots}] More than half of them are in the red. [{\ldots}] Certainly we have to do something but how we help them, that's a difficult problem'\footnote{Interviewed in \emph{T\={o}y\={o} Keizai}, 20 Feb 2010, 70--1} He also acknowledged that it is impossible to help local stations in the numbers that currently exist and suggested either network consolidation, where the `one station per prefecture' model\footnote{Influenced by the WWII \emph{ikken-isshi} `one prefecture one paper' model for newspapers\st{, ostensibly in order to reduce paper consumption and resulting in the disappearance of over 500 local daily papers}. (Kasza, \emph{The State and the Mass Media in Japan}, 187--8)}\nocite{Kasza:1988} changes to a `one station per region' model or where one local prefecture-based station broadcasts all networks. Although the overall financial situation of the non-WBA stations had improved by the end of 2010 39 companies still ended the financial year in loss, 25 making losses of \ty100--400 million (see sec.\,\ref{subsec:merger} for more on mergers).%(\cjk{一県一紙}) 
+
+Actually, local broadcasters' fate may well already be sealed. Ikeda Nobuo suggests\footnote{see n.\,\ref{note:kaimetsu}} that for the key-stations now, local stations are little but `baggage'. He also claims that the MIC's thinking is similar, quoting a senior bureaucrat speaking `about ten years ago' as follows; `Squash the local broadcasters, leave just the easily controllable key and sub-key stations. One of the aims of digitalisation is to get rid of the unprofitable local stations.'
+
+On the other hand, writing at the beginning of 2010, Kimura Mikio, of the \textit{Minp\={o}ren Kenky\={u}jo} research centre, suggested that while many broadcasters were facing immediate troubles an optimistic mid-term outlook was warranted, though the strategy of cutting production costs to maintain profitability would soon reach its natural limit, this would mean more companies would have to turn their attention to other areas, specifically the `holy ground' (\emph{sei'iki}\,) of wages (see sec.\,\ref{subsec:highwages}).\footnote{See p19 of article in n.\,\ref{note:uriagegen}} %\cjk{聖域}
+
+\section{Local television: the future of the second-tier}
+\label{local-future}
+
+The 99 \emph{keiretsu-kyoku} local broadcasters are prefecturally-based organisations with roots in the locality they serve. Although their actual programming output is limited they are the workplaces for most `tv people'. Their future both as a source of informational diversity, diluting Japan's tendency to Tokyo-oriented centralisation, and as \st{important} local employers is far from assured. Whilst in the long term it may prove impossible to maintain the status quo in terms of number and size of stations, it is important that alternatives to the Tokyo media exist. 
+
+\paragraph{Second-tier television} 
+Key-stations can be, at least superficially, respectful of the wishes of their network partners, a significant number of whom are senior in the sense of `having been founded first'.\footnote{The MHR Annual includes an appendix (e.g.\textit{MHR Yearbook 2010, 731--3}) listing broadcasters in order of their founding. Such information is possibly useful to industry historians but should primarily be seen as a confirmation of the industry's seniority structure.}  However, despite the image of cooperation \st{often} projected by networks, divergence between the tiers is great. Below I describe actual disparities in business potential, and again demonstrate that terrestrial television broadcasting in Japan is essentially an amalgam of the activities of two qualitatively different industries, the first-tier content-producing key-stations and the second-tier content-distributing local stations.
+
+\paragraph{Scale} \label{scale} Local broadcasting employs just under 80 percent of those who work for television firms in Japan, about 17,000 people.\footnote{calculated from figures in \emph{MHR Yearbook 2010}} \st{This makes i}It \textbf{is thus} a relatively small industry in absolute terms, though these figures do not count workers who rely on broadcasting for contract and part-time work or in related service industries. There are 500 or so small television production companies outside the Tokyo area who rely heavily on local broadcasters for commissions.\footnote{see n.\,\ref{note:jftc}}
+
+The 99 non-WBA companies \st{, whilst }employ four-fifths of workers yet account for just \st{less than} \textbf{under} 30 percent of \st{the broadcast} \textbf{total} industry\st{'s total} sales (apx.\,\ty600bn), the other two thirds or so (apx.\.\ty1,475bn) being made by the 15 largest WBA-based companies\st{ in the }. The 13 cross-network independents (or rather `less-dependents') account for \st{a meagre }just 2 percent.\citej{132}{JMH:2011}
+
+\subsection{Markets}
+The Kant\={o} WBA, the licence area of the key-stations, is made up of Tokyo Metropolitan Area, and the surrounding prefectures.\footnote{Chiba, Kanagawa, Gunma, Saitama, Tochigi and Ibaraki} It is home to 42 million people (17 million households); calculated on a disposable income\footnote{\st{I use this }\textbf{Used} here as a measure of how appealing a \st{certain} market is to advertisers in search of sales} per household basis, there is annually \ty85.2 trillion to be disposed of in this area.
+
+Compare this licence area with another, Fukui Prefecture. Served by affiliates of just two of the networks\footnote{FBC is a cross-net broadcaster offering programs from both TV Asahi and NTV, its single competitor is Fukui TV Broadcasting, an FNN affiliate.} Fukui is home to 0.81 million people (0.27 million households). Even though typical disposable income in Fukui is greater than that in the Kant\={o} area (\ty6.45 million per household per year as opposed to \ty5.10 million) annual total disposable income is just \ty1.72 trillion, one-fiftieth of the Kant\={o} Area. While Fukui's case may be extreme, other prefectures, for example Iwate, are similar, any potential audience is under half a million households, annual total disposable income around one-fortieth of the Kant\={o} area. 
+
+\st{Looked at i}In terms of Gross Prefectural Product (GPP) the story is equally clear. \st{The} Kant\={o} WBA accounts for 37 percent of GDP, the Kinki WBA 14 percent and the Ch\={u}ky\={o} WBA another 10 percent, Hokkaido and Fukuoka make up another 4 percent or so each. The rest of Japan's contribution is just under 30 percent, \st{this is }spread over the broadcast areas of four-fifths of broadcasters. Even for local broadcasters to find local funding for the ten percent or so of total programming they typically produce seems\st{ like} a tall order given the limitations imposed on them by a licensing system which restricts market size.
+
+\paragraph{Digital upside} Digitalisation, it has been suggested, once the pain of infrastructure investment has been survived, offers local broadcasters a way out of their financial reliance on the key-stations. Nishi contends that the ability to broadcast in the `one-seg' format\footnote{\bf Under ISDB-T each 6MHz digital channel is divided into 13 segments. `One-seg' broadcasting uses one of these to broadcast a much-compressed signal. HD-DTTV occupies 12 segments and an SD channel four.} to mobile phones will mean new business opportunities for local broadcasters.\citej{106}{Nishi:2007} These will emerge from the interactive features of DTTV, leading to more efficient tie-ups between advertisers and shoppers, and from exploiting the possibilities of linking local programming and advertising with local businesses and online services via `one-seg' capable devices. 
+
+While many broadcasters are very proud of their local connections and their community involvement, it seems doubtful that they would be willing to \st{place too much reliance} rely on \textbf{inevitably limited} income from exclusively local sources\st{, limited as it inevitably is}. Such reliance would mean local broadcasters having to further trim their coats to suit their cloth, and content further in thrall to commercial interests.
+
+\subsection{Role of local broadcasters}
+Since the advent of digital BS broadcasting in 2000 --- for local broadcasters a veritable sword of Damocles --- the key-stations, originators of the overwhelming majority of programming, have gradually gained the ability to broadcast \emph{directly} to all of Japan (whether all reachable homes are equipped to receive these signals is for the time being another matter, many are). 
+
+Key-stations have decided, primarily out of consideration for their local affiliates, to not simulcast terrestrial programming on their BS channels. They are not legally compelled to differentiate programming on terrestrial and satellite channels. For local broadcasters this \st{was, and continues to be,} \textbf{is} a matter of deep concern as; `the concurrent broadcasting of programs in both BS and terrestrial service would [...] jeopardize local terrestrial broadcasters country-wide, whose analog programming is generally less popular.'\citej{70}{Kwak:2008} Specifically BS \st{would have} undermines their role as relay for key-station programming and threatens \st{to cut off the portion of the} \textbf{their} income from NDF and `network time' advertising.
+
+Key-stations' `no simulcast' decision could be reversed or amended at will, providing they are prepared to live with the consequences. BS therefore remains a threat to the existence of local broadcasters in their current `distributor' role. 
+
+\bigskip
+
+Furthermore, an ever increasing proportion of Japan's population has been raised in a world where borderless, and much of the time gratis, communication is the norm (see sec.\ref{netdistrib}). \st{The world of l}Local broadcasting, \st{with its basis} \textbf{rooted} in geographical self-restriction, \st{is increasingly having} \textbf{has} to deal with a paradigm shift in its viewers' sensibilities. The future would seem to offer a choice between painful change or a gradual fall into irrelevance. \st{Acting against both} \textbf{Opposing} these is institutional inertia; regulators have tended to restrict themselves to making small-scale policy `adjustments' and the industry's primary instinct is to maintain the status quo (\emph{genj\={o} iji}\,).%\cjk{現状維持}
+
+\subsection{Financial links between key and local stations}
+\label{net-finances}
+Relationships between tiers are financial as well as informational. Money flows in both directions, local stations making nominal contributions to production costs and news-gathering services and key-stations paying for local distribution. How these financial linkages work in practice is far from clear.
+
+\bigskip
+
+Local broadcasters' income can be roughly divided as follows:
+\begin{close_enum}
+\item Broadcasting income (\emph{hōsō shūnyū})
+	\begin{close_enum}
+	\item Advertising sales
+	\item Other payments
+	\end{close_enum}
+\item Non-broadcasting income	
+\end{close_enum}
+
+The overall proportion of \st{its} income a local broadcaster derives from non-broadcast activities varies greatly with individual circumstances and is not dealt with here. Income from broadcasting, generally headed \emph{hōsō shūnyū} on balance sheets and financial reports subsumes two separate elements.
+
+Advertising income can be divided into \st{income from advertising} \textbf{that} sold by the local station (all `spot' and a small proportion of `time') and the portion of `time' allotted to them from that programming provided by key-stations, this is referred to as `network time', and makes up 30--40 percent of local broadcasters' advertising income.
+
+\st{In addition to this, }`Other payments' refers to the rather opaque NDF revenues; a number of \textbf{alternative terms exist} \st{refer to this payment} \emph{denpa-ry\={o}}, \emph{h\={o}s\={o}-ry\={o}}, \emph{nettow\={a}ku-hi}, \emph{nettow\={a}ku hosh\={o}} and \emph{nettow\={a}ku haibunkin}, this last term seems most prevalent and it is a translation I use here.
+
+These payments have been described as local television's `lifeline'\footnote{`Kii-kyoku to no kankei wa h\={o}kai-sunzen: Akaji r\={o}karu-kyoku no shishiruirui' [Relations with Key-Stations Near Collapse: Corpses of Indebted Local Stations Piled High], \emph{Sh\={u}kan Daiyamondo}, 15 Jan 2011, 56\label{note:shishi}}, the following section look at how this lifeline functions and \st{briefly} reviews recent changes.
+
+\bigskip
+
+Each company pays for use of the airwaves in its own licence area so if a key-station wishes a local station to pass on its programming to that locality's audience (which it generally does, thereby being able to sell a nationwide audience to its advertisers) it has to `borrow' the airwaves of the local station and, in effect, pay a rental for each program broadcast, this is the \emph{net distribution fee}, NDF.
+
+The rates for these interactions are, formally at least, fixed by the companies involved, based on the `population and economic power' of the locality involved\citej{139--40}{Sugaya:2000}, however actual amounts involved seem to depend very much on the specific financial situations of those concerned.\citej{109}{Usui:2003} Hanzawa refers to the networks as carrying out `operating aid' (\emph{keiei hojo}) \st{by means of these} \textbf{through NDF} payments.\citej{1}{Hanzawa:2003} An interviewee from the accounting department of one large local broadcaster in southern Japan suggested that the basis for calculation of NDF is the local broadcaster's potential audience \textbf{(license area population)}, \st{that is the population of the area they cover, he also stated} \textbf{and} that for key-stations to make yearly adjustments to the payments on the basis of individual local stations' financial situations would be simply too much of an undertaking and that he doubted whether this happened. Another analysis seems to suggest that population is by no means the whole picture, with Osaka (so the author claims), with 20 million viewers getting double the amount (5\%) of NDF received by Sendai (2.5\%) with three million.\citej{41}{Tanami:2006}%\cjk{経営補助}
+
+Key-station comment on reductions in NDF payments\citej{73}{Suzuki:2004} would make little sense if the amounts involved were not to some degree discretionary, observer consensus seems to be that while the objective measure `area power' (calculated factoring in local demographics and economics) is the ostensible basis for apportioning NDF payments, they are in fact used to prop up local stations who find themselves in straitened circumstances.\citej{32}{Nishi:2007}
+
+In general terms, key-stations pay in the region of \ty30 billion in NDF each year, roughly 25 percent of their `time' revenues.\footnote{`Hitome de wakaru shimbun, terebi' [At a Glance: Television and Newspapers], \emph{Sh\={u}kan Daiyamondo} 15 Jan 2011, 34} Between FY05-06 and FY08-09 levels of total spending on NDF increased for TBS (up 13.8 percent to \ty30.5 billion per year) and TV Asahi (up 4.4 percent to \ty23.8 billion), meanwhile NTV cut its NDF spending by just under 5 percent to \ty34.1 billion in FY08-09. The following year saw NTV make a cut of over 15 percent, reducing its NDF spending to \ty28.8 billion.
+
+\subsection{Networks as financial entities}
+Given this inter-tier linkage \st{a case can be made for considering} the networks themselves \st{to} \textbf{can be considered} financial entities with analytical significance. As \st{can be seen from} table\,\ref{net-profit} \textbf{illustrates} only FNN\st{, the network centred around} (Fuji Television) maintained both tiers in profit in 2009-10. The contribution of local broadcasters to total network profits for the FNN network is in the region of 25 percent, far higher than any of the other networks.\footnote{ANN, in this particular year, must be viewed separately due to the very large one-off loss of \ty4.9 billion posted by its Chūkyō WBA affiliate MēTV (\textit{Nagoya H\={o}s\={o}})}
+
+\begin{table}[t]%NETWORK PROFITS
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+{ } &				{NNN (NTV)} & 	{FNN (Fuji)} &		{JNN (TBS)} &		{ANN (Asahi)} \\ \midrule
+Total Network & 	172.62 & 		122.58 & 		45.23 & 			-5.20 \\ 
+WBA stations & 	183.01 & 		90.26 & 			50.99 & 			-14.62 \\ 
+Non-WBA stations & -10.39 & 		32.32 & 			-5.76 & 			9.42 \\ \midrule
+Affiliates in loss (\%) &40&			11&				31&				35 \\ \midrule
+Non-WBA employees (avg.)  &2805 (81.7)&2424(105.4) 	&3452(138.1) 		&1872(89.1) \\
+\bottomrule
+\end{tabular}
+\caption{\label{net-profit}Network-wide profits (\ty 100 millions), affiliates in loss and staff numbers.\newline \footnotesize Source: Compiled from \emph{MHR Yearbook 2010}}
+\end{center}
+
+\end{table}
+
+To what extent local stations are reliant, \st{in terms of finance as well as} \textbf{financially and} programming/content\textbf{-wise}, is unknown (due to the lack of clarity in the NDF system), and, as long as the key-stations feel the need to keep them in business they are \st{no doubt} safe. However they have painted themselves into a corner and unless radical cost-cutting can be implemented the move from independent broadcaster to relay station with occasional local news injects cannot be too far away. At the end of 2009, president of Fuji Media Holdings, Fuji Television's parent company, Toyoda K\={o}, saw a troubled future for local broadcasters.
+
+\begin{quote}
+We are reducing NDF payments [\emph{nettow\={a}ku-hi}\,]. We intend to make reductions in the latter half of FY09 and through FY10. However, local broadcasters are currently in a very difficult position with the advertising slump and investment in digitalisation. There's always the problem of how far we should go but I think we're heading into a new era and we have to go on reducing NDF payments.\footnote{Hasegawa Hiroshi, `H\={o}s\={o} sh\={u}ny\={u} no ik\={o} no \={o}jite dorasutikku-na kaikaku mo shiya, Fuji Media HD no kessan-setsumei-kai kara' [Fuji Holdings Eyes Drastic Measures in View of Changes in Broadcasting Income], \emph{Nikkei Ny\={u} Media}, 9 Nov 2009, \url{itpro.nikkeibp.co.jp/article/NEWS/20091109/340284/}  (accessed 20 June 2011)}%\cjk{ネットワーク費}
+\end{quote}
+
+\section{Industry restructuring}
+
+The main pressure on commercial broadcasting's ability to maintain the status quo is reductions in advertising income. If \textbf{the predictied} \st{of a sudden} fall in ratings outlined above (see sec.\,\ref{digi-viewers}) \textbf{is} realised then incomes will fall post-digitalisation. Of course this\st{ is based on the } \textbf{assumes} that ratings reflect viewership \st{numbers} accurately; Video Research, Japan's sole \st{television} ratings provider is one-third owned by Dentsu\footnote{Dentsu FY09-10 accounts, \url{www.uforeader.com/v1/se/E04760_S00066R3_4_0.html##E0002}  (accessed 12 June 2011)} and has recently been led by ex-Dentsu men\footnote{Current president Wakabayashi Itsuma (Dentsu 1969--2009), preceded by Kimura Takehiko (Dentsu 1964--2006)}, it has a vested interest in propping up ratings numbers. \st{But i}If ratings \emph{are} seen to fall this may act as catalyst for \st{the much discussed industry} restructuring. The form this restructuring will take is currently moot and the various players have different preferences.
+
+The first possibility is the maintenance of the current region-based system with a reduction in the number of companies within each region as firms merge.
+
+The second involves a change in the nature of the regions, the market within which the broadcasting companies must do business, possibly into larger `blocks', along the lines of the cross-prefectural `block' newspapers.\footnote{There is no formal definition of a block newspaper, but they tend to be larger than city papers and not national.}
+Either of the two possibilities may be accompanied by a shift to formal division between companies undertaking broadcasting (distributing the television signal) and program making, the  \textit{jutaku-intaku} arrangement seen in CS. All the above would necessitate some degree of change to existing regulations so, again, institutional inertia will be a significant factor.%(\cjk{受託・委託})
+
+\subsection{Options}
+
+\paragraph*{Merger restructuring}
+\label{subsec:merger}
+In 2003--4 the broadcasting industry at all levels agreed that the number of companies \st{currently making and distributing} \textbf{involved in} terrestrial television would fall in the future. Debate centred around the questions of who, when and what would follow. While the outlook seems, even now, to be less than optimistic, the company failures predicted as a result of the burden of investment in digitalisation have not appeared as of autumn 2011.  
+%:block first use
+Financial analysts, while placing the benefits of any mergers in the medium- rather than short-term, have argued for the necessity of industry restructuring and suggest similar alternatives; \st{forming broader broadcast areas akin to the WBAs in other regions} `block-isation' (see below), or mergers, perhaps lead by local or block papers, local industries, or national papers and broadcasters.\footnote{Sadaoka Y\={u}ji, `Chij\={o}-ha h\={o}s\={o} gy\={o}kai saihen no tenb\={o}: Anarogu teiha-go wo misueta jigy\={o}sha-saihen no hitsuy\={o}sei' [The Necessity of Industry Restructuring after the Analog Cut-off],  Mizuho Industry Focus (75), 30 Sep 2009, \url{www.mizuhocbk.co.jp/fin_info/industry/sangyou/pdf/mif_75.pdf}  (accessed 20 June 2011)} 
+
+Given \st{the} networks' \textbf{identitifications} with \st{the} large newspaper publishers, intense rivals all, it is hard to see how mergers could come about without similar parallel moves in the press. \st{This would seem to make f}Firms in the TBS--Mainichi system \textbf{seem} the most likely to have to make the first move. Nearly half of the JNN non-key-stations failed to return a profit in 2009\footnote{see n.\,\ref{note:shishi}}, in the same year Mainichi Shimbun-sha ended in the red for the first time since 1994.\footnote{`Mainichi Shimbun-sha no Kyōdō Tsūshin sai-kamei no nerai to genjitsu' [Mainichi Shimbun-sha Rejoins Kyodo News, its Aims and the Reality], \emph{The Tsukuru}, April--May 2010, 64--5} Mergers would also mean, throughout most of Japan, scrapping a significant proportion of local broadcaster investment in DTTV infrastructure as transmitter facilities are consolidated. %Under digital, separate channels can be distributed from shared transmitters. Currently, while many networks share broadcasting \emph{towers} most have their own \emph{transmitting equipment}, under merged conditions much would become redundant.
+
+\paragraph*{Block restructuring} This would involve the expansion or merging of broadcast areas to create larger markets, and a reduction in the number of \textbf{full-scale broadcasting} firms operating within those areas.
+
+\st{This} `Block-isation' raises the question of where viable blocks could be formed. Television broadcasting is both a cultural and an economic activity, ideally blocks should be both meaningful to audiences culturally and of sufficient economic potential to maintain the broadcaster/s. There are also the faits accomplis of the WBAs and other layers of administrative regionalisation to take into account. The strength of regional identities varies greatly; one of Suzuki's informant simply states, `[t]here's no block identity in Ch\={u}bu.'\citej{103}{Suzuki:2004}
+
+It is possible that the provisions in recent changes to media company regulation may hint at one possible future (see sec.\,\ref{para:relwlocals}); media holding companies are allowed to invest in up to twelve other media companies. With key-stations counting as seven stations, the remaining five may be the number of network areas envisaged by regulators, who invariably form policy in discussion with interested parties.
+
+% As part of MIC's local government administration function, it has committees set up to consider the \emph{dōshūsei} system whereby regional blocks of prefectures would be formed in an attempt to reduce administrative cost and regional dependency on central government. At its last general meeting in 2005, three separate plans for regional division were considered, dividing Japan up into 9, 11 or 13 regions.\footnote{MIC website: \url{www.soumu.go.jp/main_sosiki/singi/chihou_seido/singi/No28_sokai_05.html} (viewed 6 Oct 2011)}However, the discrepancies in population between the various areas --- the number of potential viewers and thus ratings is at the heart of the television business as it now stands --- still remains. Under the 13 area plan, the North Tōhoku area would have a population of just under four million, the South Kantō area (around Tokyo) just over 28 million.
+
+{\bf Block-isation seems to be the future preferred by `the centre', that is, by those involved in forming policy and the key-stations.\citej{181--3}{Suzuki:2004} The result would be four nationwide networks centred on the Tokyo-stations, with regional centres at the so-called \emph{kikan-kyoku} (nucleus stations), Sapporo (Hokkaidō), Sendai (Tōhoku), Shizuoka (Chūbu), Hiroshima or Okayama (Chugoku-Shikoku) and Fukuoka (Kyūshū).\citej{173--4}{Suzuki:2004} The smaller local stations would become branch offices of these regional centres performing news gathering functions and maintaining local distribution facilities.
+}
+
+\subsection{Summary and conclusions}
+
+Japan's advertising pie is getting smaller, terrestrial television's portion of that pie has been shrinking for several years. Television companies have been impoverished by the government policy of digitalisation. Spending on \st{actual programme making} \textbf{content production} has fallen, industry insiders acknowledge a corresponding fall in quality. Both ratings and figures for the number of `households using television' (HUT) continue their slow decline.\footnote{see p54, n.\,\ref{note:gimon}} 
+
+Nothing happens quickly in public policy in Japan so the broadcasting industry can expect a few more increasingly painful years of status quo as the various industry players build consensus. This will inevitably involve pain for someone; key-stations must share the income they have access to more equitably, meaning a reduction of fixed costs such as wages; weaker network stations must increase efficiency, either by prioritising distribution or production but not both, or, by finding themselves local or regional partners and looking for economies of scale.
+
+{\bf Given what seems to be key-stations and administrators preference for the `block-isation' option, smaller local broadcasters face an uncertain future. If the number of broadcast areas is reduced from the current 32 to 10--12, this will mean that two-thirds of the firms in each national network could be reduced from broadcasters with the full complement of functions --- sales, marketing, personnel management etc. --- to branch offices with limited information and news-gathering capabilities. Staff numbers at these firms could cut by 80--90 percent.
+
+Block-isation would mean the loss of significant number of television jobs and media production would become yet more concentrated in regional centres. However this may be a price worth paying for stronger regional media and the preservation of informational diversity at the national level. It should be remembered that the level of diversity exhibited by Japan's current television system is to some extent artificial, emerging from a bureaucratic `one-size-fits-all' frame of mind which regards fairness as the equal treatment of all regardless of individual differences. Thus, all prefectures, regardless of their population or `economic power', have stations pertaining to each of the four national networks. Block-isation may offer a way of preserving a proportion of this diversity while placing broadcasting businesses on a sounder financial footing, thus securing a degree of independence from Tokyo key-stations.
+}
+
+%This attitude fails to take into account the fact that running a commercial television station is a business which relies on selling audiences to advertisers, and limited audience sizes mean limits on advertising income.
+
+%On the other hand, if providing television services is a public service, then it is up to legislators and administrators to see that that service is provided fairly, and a formula for distributing the industry's wealth more equitably must be found. This could be achieved through measures to move production away from Tokyo and Osaka to the regions, an obligation placed on key-stations to reinvest profits in strengthening local stations, or incentives for key-stations to become more actively involved in owning local stations.
+
+\st{For viewers, while in the immediate future they can expect more of the same, the medium- to long-term will inevitably see a reduction in their access to local information distributed by terrestrial television though this may of course be compensated for by an increase in information available via other media. 
+}
+
+%\pagebreak
+
+%%%:ENDNOTES INSERT
+%%%%%%%%delete when not using ENDNOTES pkg
+%\newpage 
+%\begingroup 
+%\parindent 0pt 
+%\parskip 1.5ex 
+%\def\enotesize{\normalsize} 
+%\theendnotes
+%\endgroup
+%%%%%%%%delete when not using ENDNOTES pkg
+
+\pagebreak
+
+%TC:ignore
+%\section*{Bibliography}
+%\setbibpreamble{Titles of works in Japanese are given first romanised, then a bracketed translation (where possible these translations are taken from the original or from information provided by publishers, in cases where no such `official' translation was available, translations are the author's), lastly the original title in Japanese script.\par\bigskip}
+\printbibliography
+%TC:endignore
+
+\end{document}
