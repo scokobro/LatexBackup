@@ -1,0 +1,682 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Barnhurst:2001}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Barnhurst}{B.}%
+     {Kevin~G.}{K.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nerone}{N.}%
+     {John~C.}{J.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {The Guilford Press}%
+  }
+  \strng{namehash}{BKGNJC1}
+  \strng{fullhash}{BKGNJC1}
+  \field{sortinit}{B}
+  \field{booktitle}{The form of news: A history}
+  \field{isbn}{1572306378}
+  \field{shorttitle}{The Form of News}
+  \field{title}{The Form of News: A History}
+  \field{year}{2001}
+\endentry
+
+\entry{Brinkley:1997}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Brinkley}{B.}%
+     {Joel}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Harcourt Brace}%
+  }
+  \strng{namehash}{BJ1}
+  \strng{fullhash}{BJ1}
+  \field{sortinit}{B}
+  \field{shorttitle}{Defining vision}
+  \field{title}{Defining vision: How broadcasters lured the government into
+  inciting a revolution in television}
+  \field{year}{1997}
+\endentry
+
+\entry{Cooper-Chen:1997}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Cooper-Chen}{C.-C.}%
+     {Anne}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kodama}{K.}%
+     {Miiko}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Iowa State University Press}%
+  }
+  \strng{namehash}{CCAKM1}
+  \strng{fullhash}{CCAKM1}
+  \field{sortinit}{C}
+  \field{shorttitle}{Mass Communication in Japan}
+  \field{title}{Mass Communication in Japan}
+  \field{annotation}{%
+  52 Part 2. Industry Prolvlas Emory ended just 15 minutes before the evening
+  paper's deadline, but by combining several aircraft, nn-board photo
+  developing, radio transmis sion and undersea cable, the Maniac/ti scooped its
+  competitors by picture ing the historic territorial return. As a Ybmiuri
+  executive said at the time, ``We never fly executives-only reporters and
+  photographers" ('fjapmcse air' 1969). These anecdotes about aircraft
+  illustrate a number of traits that char actress japanese newspapers '1`hey
+  eagerly use techniques and tech nologies that enhance news delivery They
+  lavishly expend personnel and resources tan never important stories. They
+  compete furiously against each oh; They sponsor public service projects and
+  events, And they operate at a scale grand enough that they can afford to
+  maintain their own aircraft fleets. Circulation Newspapers of the magnitude
+  of the limbic Mainidti and Arab dwarf any U.S. daily, even t.hough_)apa.n has
+  about hall the U.S. popular tin. As 'lhble 4.1 shows, ASAP has a combined
+  daily morning/evening circulation of more than 12,6 million, whereas the
+  Kmiavihouu a nag gering 14.5 million circulation. Even though the Muimklii
+  has a combined circulation of "oily'' about G million, the largest US papers-
+  USA Bday. t.he WulISt1e¢t_AmmanI, the Nzw Ynlr T min and the Las Angela
+  Time:-with circulations between 1 and 2 million as of late 1994, pale in
+  mmpadaon. While japan boas four of the world's five largest dailies, none of
+  the 1,570 U.S. dailies even makes the top 10 list (see 'fable 42). As of
+  October l994,_]apan had fewer (121) hut large daily newspapers than t.l.
+  United Staten, with a much larger absolute circulation of 71,924,000 Vlhth
+  1..2 copies per household, many families get one na tonal paper and one
+  non-national. For example, in cenn-aljapan, every day more than 4 million
+  copies are published of the Chimldti Timber, a moor paper that happens to own
+  one twin---engine airplane and four he licopters-yet no doubt few
+  non-japanese have ever beard of it. Since t.he 1960s_]apan has ranked at or
+  very near the top of worldwide newspaper "saturation'' figures, with 578
+  copies per 1,000 people in 1992 (the U5. figure of 260 per 1,000 people puts
+  it far down on the list). Ot' the factors that boost circulation, japan has
+  them all [lewenstein 1987, 10): high literacy, relatively high per capita
+  income, evenly distributed wealth, homogeneity, intuits in world affairs,
+  good educational system, elicit distribution techniques and heavily used
+  public transportation. Moreover, tlsejapanese "tend no revere the pruned
+  word" (Whlttenmore 1961, 7).%
+  }
+  \field{year}{1997}
+\endentry
+
+\entry{JMH:2011}{book}{}
+  \name{editor}{1}{}{%
+    {{}%
+     {{Dentsu S\={o}ken}}{D.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Daiyamondo-sha}%
+  }
+  \strng{namehash}{D1}
+  \strng{fullhash}{D1}
+  \field{sortinit}{D}
+  \field{booktitle}{情報メディア白書}
+  \field{shorttitle}{Information Media White Paper}
+  \field{title}{J\={o}h\={o} media hakusho \rm[Information Media White Paper]}
+  \field{annotation}{%
+  {\cjk{電通総研}} \cjk{ダイヤモンド社}
+  \cjk{情報メディア白書}%
+  }
+  \field{year}{2011}
+\endentry
+
+\entry{Hanzawa:2003}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Hanzawa}{H.}%
+     {Seiji}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Takada}{T.}%
+     {Shinya}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HSTS1}
+  \strng{fullhash}{HSTS1}
+  \field{sortinit}{H}
+  \field{title}{Terebi bangumi seisaku no kigy\={o} keiei - bangumi seisaku
+  gaich\={u} to chosakken kanri \rm[Management of Television Program Production
+  Companies - Subcontractors and Rights Management]}
+  \verb{url}
+  \verb www.hbf.or.jp/grants/pdf/j%20i/15-ji-hanzawa.pdf
+  \endverb
+  \field{journaltitle}{H\={o}s\={o} Bunka Kikin Kenky\={u} H\={o}koku}
+  \field{annotation}{%
+  半澤誠司 and 高田真也 \cjk{テレビ番組制作業の企業経営
+  -番組制作外注と著作権管理} \cjk{放送文化基金 研究報告}%
+  }
+  \field{year}{2003}
+\endentry
+
+\entry{Hayama:2010}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hayama}{H.}%
+     {Hirotaka}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Saizu-sha}%
+  }
+  \strng{namehash}{HH1}
+  \strng{fullhash}{HH1}
+  \field{sortinit}{H}
+  \field{booktitle}{AD Zankoku Monogatari: Terebi gyokai de mita akumu}
+  \field{shorttitle}{AD Zankoku Monogatari}
+  \field{title}{AD zankoku monogatari: Terebi gy{\=o}kai de mita akumu \rm[AD
+  Tale of Cruelty: My Television Business Nightmare]}
+  \field{year}{2010}
+\endentry
+
+\entry{Kasza:1988}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kasza}{K.}%
+     {Gregory~James}{G.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {University of California Press}%
+  }
+  \strng{namehash}{KGJ1}
+  \strng{fullhash}{KGJ1}
+  \field{sortinit}{K}
+  \field{isbn}{0520059433 (alk. paper)}
+  \field{shorttitle}{The State and the Mass Media in Japan}
+  \field{title}{The State and the Mass Media in Japan, 1918-1945}
+  \list{location}{1}{%
+    {Berkeley CA}%
+  }
+  \field{annotation}{%
+  The state and the mass media in Japan, 1918-1945%
+  }
+  \field{year}{1988}
+\endentry
+
+\entry{Kimura:2007}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kimura}{K.}%
+     {Masuko}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KM1}
+  \strng{fullhash}{KM1}
+  \field{sortinit}{K}
+  \field{number}{12}
+  \field{pages}{1316\bibrangedash 20}
+  \field{shorttitle}{30th {NHK} Reception Survey}
+  \field{title}{Dai-30kai NHK jushin jittai ch\={o}sa kekka no gaiy\={o}
+  \rm[Outline of Results of 30th {NHK} Reception Survey]}
+  \field{volume}{60}
+  \field{journaltitle}{H\={o}s\={o} Gijutsu}
+  \field{annotation}{%
+  第30回NHK受信実態調査結果の概要--2011年完全デジタル移行に向けて放送受信の実態を把握
+  \cjk{第30回NHK受信実態調査結果の概要:
+  2011年完全デジタル移行に向けて放送受信の実態を把握}
+  \cjk{放送技術} 木村 恭子 本文を読む／探す Webcat
+  Plus刊行物・所蔵情報 NDL-OPAC 収録刊行物 放送技術
+  放送技術 60(12), 1316-1320, 2007-12 兼六館出版 MONTH: Dec
+  \rm[Broadcasting Technology]%
+  }
+  \field{year}{2007}
+\endentry
+
+\entry{Kwak:2008}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kwak}{K.}%
+     {{Ki-Sung}}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{satellite, broadcasting, Japan}
+  \strng{namehash}{KK1}
+  \strng{fullhash}{KK1}
+  \field{sortinit}{K}
+  \field{abstract}{%
+  This article reviews recent developments in the restructuring of the
+  satellite television industry in Japan, focusing on the degree to which new
+  entrants and existing players have participated in its infrastructure. It
+  shows that the Japanese government's position toward satellite television has
+  changed from "protecting and promoting {NHK's} interests" as noted in the
+  case of Broadcasting Satellite analog service to "balancing the development
+  of all satellite services." It argues that the commercial terrestrial
+  broadcasters' less enthusiastic attitude toward satellite television and the
+  lack of clarity (in platform operations) in regulation have largely
+  contributed to the stagnation of satellite television in Japan.%
+  }
+  \field{number}{1}
+  \field{pages}{62\bibrangedash 84}
+  \field{shorttitle}{Restructuring the Satellite Television Industry}
+  \field{title}{Restructuring the Satellite Television Industry in {J}apan}
+  \verb{url}
+  \verb http://tvn.sagepub.com/cgi/content/abstract/9/1/62
+  \endverb
+  \field{volume}{9}
+  \field{journaltitle}{Television New Media}
+  \field{annotation}{%
+  DOI: 10.1177/1527476407306624%
+  }
+  \field{year}{2008}
+\endentry
+
+\entry{Kwak:1999}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kwak}{K.}%
+     {Ki-Sung}{K.-S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {KLUWER ACADEMIC PUBLISHERS GROUP}%
+  }
+  \strng{namehash}{KKS1}
+  \strng{fullhash}{KKS1}
+  \field{sortinit}{K}
+  \field{number}{3--4}
+  \field{pages}{255\bibrangedash 274}
+  \field{shorttitle}{Regulation of television broadcasting in East Asia}
+  \field{title}{{The context of the regulation of television broadcasting in
+  East Asia}}
+  \field{volume}{61}
+  \field{journaltitle}{Gazette}
+  \field{year}{1999}
+\endentry
+
+\entry{Matsuoka:2004}{book}{}
+  \name{editor}{2}{}{%
+    {{}%
+     {Matsuoka}{M.}%
+     {Shinji}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {K\={o}go}{K.}%
+     {Eiki}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Gakubunsha}%
+  }
+  \keyw{Japan, televeision}
+  \strng{namehash}{MSKE1}
+  \strng{fullhash}{MSKE1}
+  \field{sortinit}{M}
+  \field{booktitle}{Shin Genba kara mita H\={o}s\={o}gaku [Broadcasting Studies
+  from the Workplace]}
+  \field{shorttitle}{Shin Genba kara mita H\={o}s\={o}gaku}
+  \field{title}{Shin genba kara mita h\={o}s\={o}gaku \rm[Broadcasting Studies
+  from the Workplace]}
+  \field{annotation}{%
+  Genba kara mita Hoso-gaku (Newspaper Studies from the Workplace)
+  新・現場からみた放送学 [単行本] 松岡 新児 (著), 向後
+  英紀 (著)%
+  }
+  \field{year}{1996}
+\endentry
+
+\entry{Miyazaki:2011}{book}{}
+  \name{editor}{1}{}{%
+    {{}%
+     {Miyazaki}{M.}%
+     {Yusuke}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Takahashi Shoten}%
+  }
+  \strng{namehash}{MY1}
+  \strng{fullhash}{MY1}
+  \field{sortinit}{M}
+  \field{booktitle}{2012-nenpan zukai kakumei! Gy{\=o}kai chizu saishin
+  daijesuto}
+  \field{shorttitle}{Gy{\=o}kai chizu}
+  \field{title}{2012-nenpan zukai kakumei! Gy{\=o}kai chizu saishin daijesuto}
+  \field{year}{2011}
+\endentry
+
+\entry{Nakano:2008}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nakano}{N.}%
+     {Akira}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Sh\={u}wa Shisutemu}%
+  }
+  \strng{namehash}{NA1}
+  \strng{fullhash}{NA1}
+  \field{sortinit}{N}
+  \field{booktitle}{Hoso Gyokai no Doko to karakuri ga yoku wakaru hon}
+  \field{shorttitle}{H\={o}s\={o} gy\={o}kai no d\={o}k\={o} to karakuri}
+  \field{title}{H\={o}s\={o} gy\={o}kai no d\={o}k\={o} to karakuri ga yoku
+  wakaru hon \rm[Understanding the trends and inner workings of the
+  broadcasting industry]}
+  \field{year}{2008}
+\endentry
+
+\entry{Nishi:2007}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nishi}{N.}%
+     {Tadashi}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {T{\=o}y{\=o} Keizai Shinp{\=o}-sha}%
+  }
+  \strng{namehash}{NT1}
+  \strng{fullhash}{NT1}
+  \field{sortinit}{N}
+  \field{booktitle}{Shinpan Zukai H{\=o}s{\=o} Gy{\=o}kai Handobukku
+  [Broadcasting Industry Handbook: New Edition]}
+  \field{shorttitle}{H{\=o}s{\=o} gy{\=o}kai handobukku}
+  \field{title}{Shinpan zukai h{\=o}s{\=o} gy{\=o}kai handobukku
+  \rm[Broadcasting Industry Handbook: New Edition]}
+  \field{annotation}{%
+  {\cjk{新版図解放送業界ハンドブック}}%
+  }
+  \field{year}{2007}
+\endentry
+
+\entry{Pharr:1996}{book}{}
+  \name{editor}{2}{}{%
+    {{}%
+     {Pharr}{P.}%
+     {Susan~J.}{S.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Krauss}{K.}%
+     {Ellis~S.}{E.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {University of Hawai'i Press}%
+  }
+  \keyw{Mass media, Politics,Japan}
+  \strng{namehash}{PSJKES1}
+  \strng{fullhash}{PSJKES1}
+  \field{sortinit}{P}
+  \field{isbn}{0824816986 (cased) 0824817613 (pbk)}
+  \field{shorttitle}{Media and Politics in Japan}
+  \field{title}{Media and Politics in Japan}
+  \field{annotation}{%
+  Media and Politics in Japan%
+  }
+  \field{year}{1996}
+\endentry
+
+\entry{Shimazaki:2009}{book}{}
+  \name{editor}{3}{}{%
+    {{}%
+     {Shimazaki}{S.}%
+     {Asahiko}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ikeda}{I.}%
+     {Masayuki}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yonekura}{Y.}%
+     {Ritsu}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Gakubunsha}%
+  }
+  \strng{namehash}{SAIMYR1}
+  \strng{fullhash}{SAIMYR1}
+  \field{sortinit}{S}
+  \field{booktitle}{H\={o}s\={o}-ron}
+  \field{shorttitle}{H\={o}s\={o}-ron}
+  \field{title}{H\={o}s\={o}-ron \rm[Broadcasting Theory]}
+  \field{annotation}{%
+  島崎 哲彦
+  1946年神奈川県生まれ。1989年立教大学大学院社会学研究科博士前期課程修了。博士(社会学)。現職、東洋大学社会学部メディアコミュニケーション学科教授。専門分野はマス・コミュニケーション論、メディア論、社会調査法
+  池田 正之
+  1946年山口県生まれ。1970年早稲田大学経済学部政治学科卒業。現職、札幌大学文化学部准教授。専門分野はメディア論、公共放送論、ジャーナリズム論
+  米倉 律
+  1968年愛媛県生まれ。1994年早稲田大学大学院政治学研究科修士課程修了。現職、NHK放送文化研究所専任研究員。東洋大学、宇都宮大学非常勤講師。早稲田大学メディア文化研究所客員研究員。専門分野はメディア論、情報行動論、公共放送論(本データはこの書籍が刊行された当時に掲載されていたものです)
+  p45 suggests that at end of 1990s, payments from key to local stations
+  connected to onpass of national programming (ネットワーク放送料)came
+  to 80% of their income. NDF payments, denpa-ryo, denparyo,%
+  }
+  \field{year}{2009}
+\endentry
+
+\entry{Sugaya:2000}{book}{}
+  \name{editor}{2}{}{%
+    {{}%
+     {Sugaya}{S.}%
+     {Minoru}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nakamura}{N.}%
+     {Kiyoshi}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Chuo Keizai-sha}%
+  }
+  \strng{namehash}{SMNK1}
+  \strng{fullhash}{SMNK1}
+  \field{sortinit}{S}
+  \field{booktitle}{Hoso Media no Keizaigaku [Economics of Broadcast Media]}
+  \field{shorttitle}{H\={o}s\={o} Media no Keizaigaku}
+  \field{title}{H\={o}s\={o} media no keizaigaku \rm[Economics of Broadcast
+  Media]}
+\endentry
+
+\entry{Suzuki:2004}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Suzuki}{S.}%
+     {Kenji}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Nihon Hy\={o}ronsha}%
+  }
+  \strng{namehash}{SK1}
+  \strng{fullhash}{SK1}
+  \field{sortinit}{S}
+  \field{booktitle}{Chih\={o} terebi-kyoku wa ikinokoreru ka: Chij\={o}ha
+  dejitaru-ka de yuragu 'sh\={u}ch\={u} haij\={o} gensoku'}
+  \field{shorttitle}{Chih\={o} terebi-kyoku wa ikinokoreru ka}
+  \field{title}{Chih\={o} terebi-kyoku wa ikinokoreru ka: Chij\={o}ha
+  dejitaru-ka de yuragu `sh\={u}ch\={u} haijo gensoku' \rm[Can local television
+  survive? Digitalisation is shaking media concentration rules]}
+  \field{year}{2004}
+\endentry
+
+\entry{Takahashi:2001}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Takahashi}{T.}%
+     {K}{K}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Gakk{\=o}-h{\=o}jin T{\=o}h{\=o} Gakuen}%
+  }
+  \strng{namehash}{TK1}
+  \strng{fullhash}{TK1}
+  \field{sortinit}{T}
+  \field{booktitle}{H{\=o}s{\=o} no ZenShigoto 2003 (Every Job in Broadcasting
+  2003) \cjk{放送の全仕事}}
+  \field{shorttitle}{H{\=o}s{\=o} no zen-shigoto}
+  \field{title}{H{\=o}s{\=o} no zen-shigoto 2003 \rm[Every Job in Broadcasting
+  2003]}
+  \field{annotation}{%
+  H{\=o}s{\=o}no ZenShigoto 2003%
+  }
+  \field{year}{2001}
+\endentry
+
+\entry{Tanami:2006}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Tanami}{T.}%
+     {Ichir{\=o}}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Gijutsu Hy{\=o}ron-sha}%
+  }
+  \strng{namehash}{TI1}
+  \strng{fullhash}{TI1}
+  \field{sortinit}{T}
+  \field{booktitle}{Gen'eki Terebiman ga Akasu! Terebi Gy{\=o}kai Marumie
+  Dokuhon}
+  \field{shorttitle}{Gen'eki terebiman ga akasu!}
+  \field{title}{Gen'eki terebiman ga akasu! Terebi gy{\=o}kai marumie dokuhon
+  \rm[A Working TV-man tells it all! The TV Business Exposed]}
+  \field{annotation}{%
+  {\cjk{現役テレビマンが明かす!テレビ業界まるみえ読本}}%
+  }
+  \field{year}{2006}
+\endentry
+
+\entry{Usui:2003}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Usui}{U.}%
+     {Hiroyoshi}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {PHP Shinsho}%
+  }
+  \strng{namehash}{UH1}
+  \strng{fullhash}{UH1}
+  \field{sortinit}{U}
+  \field{booktitle}{Terebi no Ky{\=o}kasho (The Television Textbook)
+  \cjk{テレビの教科書}}
+  \field{shorttitle}{Terebi no Ky{\=o}kasho}
+  \field{title}{Terebi no ky{\=o}kasho \rm[The Television Textbook]}
+  \field{annotation}{%
+  ex tv-producer now an academic \cjk{テレビの教科書}%
+  }
+  \field{year}{2003}
+\endentry
+
+\entry{Valaskivi:2007}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Valaskivi}{V.}%
+     {Katja}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {University of Helsinki}%
+  }
+  \keyw{imported}
+  \strng{namehash}{VK1}
+  \strng{fullhash}{VK1}
+  \field{sortinit}{V}
+  \field{number}{4}
+  \field{shorttitle}{Mapping media and communication research: Japan}
+  \field{title}{{Mapping media and communication research: Japan}}
+  \field{journaltitle}{Communication Research Centre, Research Reports}
+  \field{year}{2007}
+\endentry
+
+\entry{Yuasa:2006}{book}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Yuasa}{Y.}%
+     {M}{M}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Shukunami}{S.}%
+     {T}{T}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Azami}{A.}%
+     {T}{T}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ito}{I.}%
+     {T}{T}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Uchiyama}{U.}%
+     {T}{T}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Yuhikaku Compact}%
+  }
+  \strng{namehash}{YM+1}
+  \strng{fullhash}{YMSTATITUT1}
+  \field{sortinit}{Y}
+  \field{booktitle}{Media-sangy{\=o}ron [Media Industry Theory]}
+  \field{shorttitle}{Media-sangy{\=o}ron}
+  \field{title}{Media-sangy{\=o}ron \rm[Media Industry Theory]}
+  \field{annotation}{%
+  Media-sangy{\=o}ron%
+  }
+  \field{year}{2006}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
