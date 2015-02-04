@@ -1,0 +1,70 @@
+\documentclass[11pt, headings=normal]{scrartcl}
+\usepackage{"/Users/spkb/Desktop/NewspaperBiz-CONVERSION/pandoc-md-latextests/spkb-pack"}
+
+\usepackage{graphicx}
+
+\usepackage{fontspec}
+%\setmainfont{Kozuka Mincho Pro}
+%\setmainfont{Arial Unicode MS}
+\setmainfont{Kozuka Mincho Pro M}
+\defaultfontfeatures{Scale=MatchLowercase}
+\newenvironment{CJK}{\fontspec[Scale=0.9]{Hiragino Kaku Gothic Pro}}{}
+\newcommand{\cjk}[1]{{\fontspec[Scale=0.9]{Hiragino Kaku Gothic Pro}#1}}
+
+\XeTeXlinebreaklocale"en"%enables Japanese text/line breaking
+
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=0.8\maxwidth]{#1}}
+
+\title{Japan's 'new-style' international Broadcaster}
+
+\author{Herman Humperdink}
+\date{26 July 2014}
+
+%%%%%%%BEGINNING OF DOCUMENT%%%%%%% 
+\begin{document}
+
+\maketitle
+
+
+\section{this top level title}\label{this-top-level-title}
+
+Etiam porta sem \emph{malesuada} magna mollis euismod. Cras justo odio, dapibus
+ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue
+laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis
+euismod semper. Maecenas sed diam eget risus varius blandit sit amet non
+magna.
+
+\subsection{Second level title}\label{second-level-title}
+
+日本政府の現地対策本部長の中山泰秀外務副大臣は２３日朝、ヨルダンの首都アンマンで記者団に「あらゆる手立てを使いながら、部族長や宗教家をはじめコンタクトをとりつつ、がんばっている」と語った。
+
+「イスラム国」が勢力を広げたイラクとシリアのうち、イラクは部族社会の伝統が残る。日本政府関係者は「『イスラム国』は支配を進めるため、部族との関係を重視し、既存の宗教も無視できない」とみる。このため、「イスラム国」と関係を持つ部族や宗教関係者と水面下で接触しているとみられる。
+
+Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+ut fermentum massa justo sit amet risus. Vestibulum id ligula porta
+felis euismod semper. Curabitur blandit tempus porttitor. Nullam quis
+risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Nullam
+quis risus eget urna mollis ornare vel eu leo.\citep{Asai:2011}
+
+\begin{enumerate}
+\item  list elements
+\item  another elements
+\item  yet more.
+\end{enumerate}
+
+\subsubsection{Third level title}
+
+Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem
+malesuada magna mollis euismod. Maecenas sed diam eget risus varius
+blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo,\citep{Biltereyst:1995}
+tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac
+cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+sit amet risus.
+
+\renewcommand\refname{References}
+\bibliography{/Users/spkb/Documents/Bibliographies/mybib}
+  
+\end{document}

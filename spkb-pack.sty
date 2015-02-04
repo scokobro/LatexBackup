@@ -1,0 +1,172 @@
+\ProvidesPackage{spkb-pack}
+
+%PATH = "/Users/spkb/Documents/SharedWritingTemplates/spkb-pack.sty"
+
+\usepackage{geometry} % See geometry.pdf for layout options.
+\geometry{a4paper}
+
+\usepackage[english]{babel}
+\RequirePackage[babel]{csquotes}
+
+\makeatletter
+\setlength\@fptop{0\p@}% float at the top
+%\setlength\@fpbot{0\p@}% float at the bottom
+\makeatother
+
+\usepackage[figuresright]{rotating}
+
+\usepackage{graphicx}
+\usepackage{xcolor}% colors
+\usepackage{pstricks}% for drawing graphs etc
+\usepackage{pst-bar}% for bar graphs
+\usepackage{pst-plot}% for plotted lines
+\usepackage{pstricks-add}% MUST BE LAST!
+
+%===== FONTSPEC FOR JAPANESE ==========
+\usepackage{fontspec}
+\defaultfontfeatures{Scale=MatchLowercase}
+\newenvironment{CJK}{\fontspec[Scale=0.9]{Hiragino Mincho Pro}}{}
+\newcommand{\cjk}[1]{{\fontspec[Scale=0.9]{Hiragino Mincho Pro}#1}}
+%======================================
+
+%======= KOMA-FONT SETTINGS ===================
+% \setcapindent{1em} %change alignment of caption
+\setkomafont{captionlabel}{\scshape}% caption labels
+% \setkomafont{caption}{\sffamily}
+% \setkomafont{disposition}{\rmfamily}
+% \addtokomafont{section}{\bfseries\itshape}
+% \addtokomafont{subsection}{\bfseries\itshape\hspace{20 mm}}%indent this
+% \addtokomafont{subsection}{\itshape}%indent this
+%======= KOMA-FONT SETTINGS ===================
+
+\usepackage{setspace}% allows adjust of linespace
+
+%======= DEALING WITH URLS ===================
+\usepackage{url}% reformat urls into tt and break
+%\def\UrlFont{\rm}% to show in Roman typeface
+\renewcommand{\UrlBreaks}{\do\/\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\.}
+%======= DEALING WITH URLS ===================
+
+\usepackage{textcomp}% allows use of YEN symbol
+\usepackage{marvosym}% various symbols
+\usepackage{xspace}% clever spaces after abbrevs
+\usepackage{filecontents}% allows input from data file
+\usepackage{fancyvrb}
+\usepackage{lscape}
+\usepackage{pdfsync}
+
+%======= TABLE RELATED ==============================
+\usepackage{tabulary}% for MMD - tables
+\usepackage{booktabs}% for MMD - tables
+\usepackage{colortbl}% shaded cells & row
+\usepackage{multirow}
+\usepackage{multicol}
+%======= TABLE RELATED ==============================
+
+%===== CROSSREF RELATED =============================
+\usepackage[breaklinks=true]{hyperref} %hyperlinks
+\usepackage[nameinlink, noabbrev]{cleveref} %use \cref{}
+\usepackage[all]{hypcap}% hyperlinks to TOP of images
+\let\href\autoref%fixes hyperref Xrefs so they make numbers
+%===== CROSSREF RELATED =============================
+
+\usepackage{color,soul} %adds highlighting, underlining etc
+\definecolor{hlcol}{rgb}{.95,.95,.7}
+\sethlcolor{hlcol}
+\definecolor{rred}{rgb}{0.9,0,0}
+\setstcolor{rred}
+
+\newcommand{\cmmt}[1]{}%multiline comments - CMMT - opt-cmd-C
+
+%======= SHOW LABELS =============
+%\usepackage{showlabels}
+%\renewcommand{\showlabelfont}{\tiny\slshape\red}
+%======= SHOW LABELS =============
+
+\usepackage{framed}%easy frames/shaded boxes around text
+\definecolor{shadecolor}{rgb}{.93,.93,.93}
+
+\usepackage[linecolor=red, backgroundcolor=white, bordercolor=red]{todonotes}%todonotes in margin
+
+%====== NORMAL NATBIB STYLE CITES ==========
+% \usepackage{natbib}
+% \bibliographystyle{apalike}
+% \setcitestyle{notesep={:},round,aysep={},yysep={;}}
+%====== NORMAL NATBIB STYLE CITES ==========
+
+%======== MAKE INDEX/AUTHOR_INDEX IF NEEDED  ======
+%\usepackage{makeidx}
+%\makeindex
+%\usepackage{authorindex}% use \aimention{}
+%======== MAKE INDEX/AUTHOR_INDEX IF NEEDED  ======
+
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+%\usepackage[nolists]{endfloat}% moves floats to end and inserts markers in text
+
+%======= MAKE FOOTNOTES INTO ENDNOTES ========
+\usepackage{endnotes}
+\let\footnote=\endnote
+\renewcommand\enoteformat{\noindent\theenmark.\ \hangindent .7\parindent}% this formats the endnotes without superscript numbers
+%======= MAKE FOOTNOTES INTO ENDNOTES ========
+
+%======= INSERT DRAFT WATERMARK ========
+% \usepackage{draftwatermark}
+% \SetWatermarkAngle{60}
+% \SetWatermarkScale{1.5}
+% \SetWatermarkLightness{0.9}
+%======= INSERT DRAFT WATERMARK ========
+
+%======== LIST RELATED  ===================
+%\renewcommand{\labelitemi}{\Forward}%uses marvosym 'play' (right-triangle) for lists
+
+\newenvironment{my_enum}{
+\begin{enumerate}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+\newenvironment{my_enumerate}{
+\begin{enumerate}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+\newenvironment{close_enum}{
+\begin{enumerate}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{1pt}
+ \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+\newenvironment{close_descrip}{
+\begin{description}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{1pt}
+ \setlength{\parsep}{0pt}}{\end{description}
+}
+\newenvironment{close_item}{
+\begin{itemize}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{1pt}
+ \setlength{\parsep}{0pt}}{\end{itemize}
+}
+%==========================================
+
+\hyphenation{o-shi-ga-mi chi-ra-shi han-bai-ten yomi-uri asa-hi
+  mai-nichi san-kei ca-mera-work Sky-Per-fect-JSAT mi-su-e-ta
+  tsu-mi-ga-mi o-shi-ga-mi zan-shi shim-bun kyo-to to-kyo  cir-cu-la-tion-first-ism}
+
+%========  IN-TEXT SHORTCUTS  ==========================
+\newcommand{\hb}{\emph{hanbaiten}\xspace}
+\newcommand{\og}{\emph{oshigami}\xspace}
+\newcommand{\crs}{\emph{chirashi}\xspace}
+\newcommand{\nnip}{\emph{Niigata Nippō}\xspace}
+\newcommand{\ty}{\textyen}
+\newcommand{\pct}{{\small \%}\xspace}
+\newcommand{\TYKZ}{\emph{T\={o}y\={o} Keizai}}
+\newcommand{\hrpt}{\textit{H\={o}s\={o} Rep\={o}to}}
+%========  IN-TEXT SHORTCUTS  ==========================
+
+\XeTeXlinebreaklocale"en"%enables Japanese text/line breaking
